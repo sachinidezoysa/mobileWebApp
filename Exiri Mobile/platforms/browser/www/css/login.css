@@ -1,0 +1,31 @@
+.title1{
+    color: red;
+}
+
+.button {
+    background-color: #FFB300;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+  }
+
+  .button1 {border-radius: 25%;}
+
+  .button_1 {
+    background-color: #FF3D00;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+  }
+
+  .button2 {border-radius: 25%;}
