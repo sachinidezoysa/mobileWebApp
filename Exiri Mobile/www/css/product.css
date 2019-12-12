@@ -207,10 +207,11 @@
 
 .gen-item-card {
     min-width: 100% !important;
+    min-height: 58vw;
 }
 
 .seperate {
-    width: 33.3%;
+    width: 50%;
 }
 
 .favourite {
@@ -241,6 +242,11 @@
 
 .item-card>.card-content-2>img {
     width: 18vw;
+    height: auto;
+}
+
+.gen-item-card>.card-content-2>img {
+    width: 35vw !important;
     height: auto;
 }
 
