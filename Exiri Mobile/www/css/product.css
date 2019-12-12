@@ -2,7 +2,7 @@
     .app {}
 }
 
-.app {
+.page {
     display: flex;
     flex-direction: column;
     height: calc(106vh - 60px);
@@ -15,6 +15,7 @@
 
 .header {
     display: flex;
+    margin: 4px 4px 0px 4px;
 }
 
 .header>span {
@@ -31,14 +32,223 @@
     cursor: pointer;
 }
 
+
+/* MAIN CONTENT */
+
 .content {
+    margin-top: 5px;
     flex: 1;
+    overflow-x: auto;
+    justify-content: flex-start !important;
 }
+
+.content>.search-and-promo {
+    padding: 10px;
+    flex: 0 23%;
+    height: 100%;
+}
+
+.content>.search-and-promo>input {
+    margin: 0 auto;
+    width: 95%;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 25px;
+    padding: 5px;
+    border: none;
+    background-color: #e0e0e0;
+}
+
+.content>.search-and-promo>.promo-slider {
+    flex: 1;
+    margin-top: 10px;
+    background: chocolate;
+    border-radius: 14px;
+    background-image: url('img/offer1.jpg');
+    color: #fff;
+    padding: 10px;
+}
+
+.content>.search-and-promo>.promo-slider>.column-1 {
+    flex: 0;
+    font-size: 3vh;
+}
+
+.content>.search-and-promo>.promo-slider>.column-2 {
+    flex: 1;
+    font-size: 2.5vh;
+    text-align: center;
+    font-family: cursive;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content>.search-and-promo>.promo-slider>.column-3 {
+    flex: 0;
+    font-size: 3vh;
+}
+
+.content>.categories-options {
+    flex: 0;
+    height: 100%;
+}
+
+.content>.categories-options>.options {
+    overflow-x: auto;
+    justify-content: flex-start;
+}
+
+.content>.categories-options>.options>.option {
+    margin: auto;
+    min-width: 25vw;
+    text-align: center;
+}
+
+.content>.categories-options>.options>.option>div {
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.content>.categories-options>.options>div:nth-child(1)>div {
+    background: rgb(182, 3, 137);
+}
+
+.content>.categories-options>.options>div:nth-child(2)>div {
+    background: green;
+}
+
+.content>.categories-options>.options>div:nth-child(3)>div {
+    background: rgb(206, 67, 3);
+}
+
+.content>.categories-options>.options>div:nth-child(4)>div {
+    background: rgb(202, 1, 1);
+}
+
+.content>.categories-options>.options>div:nth-child(5)>div {
+    background: rgb(70, 4, 156);
+}
+
+.content>.categories-options>.options>.option>span {
+    white-space: nowrap;
+    margin: 0 10px;
+}
+
+.content>.categories-options>.categories {
+    overflow-x: auto;
+    justify-content: flex-start;
+}
+
+.content>.categories-options>.categories>.category {
+    background: #5a4b5a;
+    margin: 3px 5px;
+    min-width: 25vw;
+    text-align: center;
+    border-radius: 3px;
+    color: #dedede;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content>.product-items {
+    flex: 1;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.fav-category {
+    overflow-x: auto;
+}
+
+.gen-category {
+    position: relative;
+    padding: 10px;
+    height: 67%;
+}
+
+.gen-td {
+    width: 100%;
+    display: flex;
+}
+
+.fav-product-tbody {
+    display: flex;
+}
+
+.product-tbody {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-card {
+    background-color: white;
+    box-shadow: 0 0 2px black;
+    padding: 5px;
+    min-width: 27vw;
+    min-height: 30vw;
+}
+
+.gen-item-card {
+    min-width: 100% !important;
+}
+
+.seperate {
+    width: 33.3%;
+}
+
+.favourite {
+    margin: 0 8px;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+.item-card>.card-content-1 {
+    flex: 0 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0 5px;
+    font-size: 1.8vh;
+}
+
+.item-card>.card-content-1>span:nth-child(1) {
+    font-size: 1.8vh;
+    margin-right: 6px;
+    color: #f78611;
+}
+
+.item-card>.card-content-2 {
+    flex: 0 75%;
+    margin: 0 auto;
+}
+
+.item-card>.card-content-2>img {
+    width: 7vh;
+}
+
+.item-card>.card-content-3 {
+    flex: 0 15%;
+    text-align: center;
+}
+
+
+/* FOOTER */
 
 .footer {
     display: flex;
     height: 5vh;
-    background: #0F0F74;
+    background: #05053a;
 }
 
 .footer>span {
