@@ -31,10 +31,10 @@
             </span>
         </div>
 
-        <div class="content vertical">
+        <div id="cont" class="content vertical">
             <div class="search-and-promo vertical">
                 <input type="text" placeholder="Search Products">
-                <div class="promo-slider horizontal" style="background-image: url('img/offer1.jpg')">
+                <div id="slider" class="promo-slider horizontal" style="background-image: url('img/offer1.jpg')">
                     <span class="column-1 vertical"> 
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                     </span>
@@ -96,6 +96,7 @@
             </div>
 
             <div class="product-items">
+                <span class="prod-title"> Favourites </span>
                 <div class="fav-category">
                     <table id="fav-product-table">
                         <tbody class="fav-product-tbody">
@@ -105,7 +106,9 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="gen-category">
+
+                <span class="prod-title"> Products </span>
+                <div id="wrap" class="gen-category">
                     <table id="general-product-table">
                         <tbody class="product-tbody">
                             <tr>
