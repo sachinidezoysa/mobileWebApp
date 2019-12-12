@@ -24,36 +24,60 @@
 
 <body>
 
-    <div id="btn-login" class="jumbotron text-center">
-        <h1>My First Bootstrap Page</h1>
-        <p>Resize this responsive page to see the effect!</p>
-    </div>
+    <div class="page">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="p-image">
-                    <i class="fa fa-camera upload-button"></i>
-                    <input class="file-upload" type="file" accept="image/*" />
+
+        <div class="header">
+            <img class="logo" src="img/exiri.png">
+            <span>
+                <img class="notification" src="img/bell.svg">
+                <img class="profile" src="img/user.svg">
+            </span>
+        </div>
+
+
+        <div class="main-container vertical">
+            <div class="cont-1  vertical">
+                <img class="profile" src="img/user.svg">
+                <h3 align="center">User X</h3>
+            </div>
+            <div class="cont-2 vertical">
+                <div>
+                    <span> Full Name </span>
+                    <input type="text" placeholder="Full Name here">
                 </div>
-                <h3>Column 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Column 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <div>
+                    <span> Email </span>
+                    <input type="text" placeholder="Email here">
+                </div>
+                <div>
+                    <span> Address </span>
+                    <textarea rows="4" cols="50" >Address Here</textarea>
+                </div>
+                <br><br>
+                <div class="btn-cont">
+                    <button type="submit" class="editBtn" align="right"><b>LOG IN</b></button>
+                </div>
             </div>
         </div>
+
+
+        <div class="footer">
+            <span>
+                <img src="img/home.svg">
+            </span>
+            <span>
+                <div class="cart">
+                    <img src="img/shopping-cart.svg">
+                </div>
+            </span>
+            <span>
+                <img src="img/dashboard.svg">
+            </span>
+        </div>
+
+
     </div>
-
-
 
 </body>
 
