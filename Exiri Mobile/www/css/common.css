@@ -25,3 +25,10 @@
 ::-webkit-scrollbar-thumb {
     background: transparent;
 }
+
+.nav-back{
+    font-size: 4.5vh !important;
+    font-size: 4vh !important;
+    margin-right: 5px;
+    color: orangered;
+}
