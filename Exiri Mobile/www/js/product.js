@@ -462,6 +462,9 @@ $(document).ready(function() {
         window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/contact.html';
     });
 
+    $('#btn-Delivery-info').click(() => {
+        window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/delivery-info.html';
+    });
 
     // OPEN CAMERA
     $('#btn-camera').click(event => {
