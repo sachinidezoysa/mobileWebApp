@@ -45,7 +45,6 @@ Exiri Mobile/platforms/browser/www/login.html
 Exiri Mobile/platforms/browser/www/css/about.css
 Exiri Mobile/platforms/browser/www/index.html
 Exiri Mobile/platforms/browser/www/login.html
-Exiri Mobile/platforms/browser/www/css/common.css
 Exiri Mobile/platforms/browser/www/css/index.css
 Exiri Mobile/platforms/browser/www/css/login.css
 Exiri Mobile/platforms/browser/www/img/no-image.png
@@ -94,3 +93,4 @@ Exiri Mobile/platforms/browser/www/css/index.css
 Exiri Mobile/platforms/browser/www/css/login.css
 Exiri Mobile/platforms/browser/www/js/index.js
 Exiri Mobile/platforms/browser/www/js/login.js
+Exiri Mobile/platforms/browser/www/plugins/cordova-plugin-file/www/browser/Preparing.js
