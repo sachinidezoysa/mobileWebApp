@@ -23,6 +23,12 @@
 
 <body>
     <div class="page">
+
+        <!-- CAMERA -->
+        <video id="video" width="640" height="480" autoplay></video>
+        <!-- <canvas id="canvas" width="640" height="480"></canvas> -->
+        <span id="cam-close" class="camera-close"> <li class="fa fa-times-circle" aria-hidden="true"></li> </span>
+
         <div class="header">
             <img class="logo" src="img/exiri.png">
             <span>
@@ -33,7 +39,10 @@
 
         <div id="cont" class="content vertical">
             <div class="search-and-promo vertical">
-                <input type="text" placeholder="Search Products">
+                <span>
+                    <input class="horizontal" type="text" placeholder="Search Products">
+                    <span id="btn-camera" class="camera"> <li class="fa fa-camera" aria-hidden="true"> </li></span>
+                </span>
                 <div id="slider" class="promo-slider horizontal" style="background-image: url('img/offer1.jpg')">
                     <span class="column-1 vertical"> 
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -54,7 +63,7 @@
                         <span> Payment Plan </span>
                     </div>
                     <div class="option">
-                        <div> <i class="fa fa-phone" aria-hidden="true"></i> </div>
+                        <div id="btn-contact-us"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
                         <span> Contact Us </span>
                     </div>
                     <div class="option">
@@ -62,7 +71,7 @@
                         <span> eXiri Mall </span>
                     </div>
                     <div class="option">
-                        <div> <i class="fa fa-users" aria-hidden="true"></i> </div>
+                        <div id="btn-about-us"> <i class="fa fa-users" aria-hidden="true"></i> </div>
                         <span> About Us </span>
                     </div>
                     <div class="option">
@@ -122,17 +131,19 @@
         </div>
 
         <div class="footer">
-            <span>
+            <div>
+                <span>
                 <img src="img/home.svg">
             </span>
-            <span>
+                <span>
                 <div class="cart">
                     <img id="btnViewCart" src="img/shopping-cart.svg">
                 </div>
             </span>
-            <span>
+                <span>
                 <img src="img/dashboard.svg">
             </span>
+            </div>
         </div>
 
     </div>
