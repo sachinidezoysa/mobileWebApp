@@ -412,6 +412,29 @@ var arrProducts = [{
 
 $(document).ready(function() {
 
+    // TOASTER CONIGS
+    toastr.options = {
+        'closeButton': true,
+        'debug': false,
+        'newestOnTop': false,
+        'progressBar': false,
+        'positionClass': 'toast-top-right',
+        'preventDuplicates': false,
+        'showDuration': '1000',
+        'hideDuration': '1000',
+        'timeOut': '5000',
+        'extendedTimeOut': '1000',
+        'showEasing': 'swing',
+        'hideEasing': 'linear',
+        'showMethod': 'fadeIn',
+        'hideMethod': 'fadeOut',
+    }
+
+    // INITIAL LOADER
+    setTimeout(function() {
+        $('.loader').css('display', 'none');
+    }, 3000);
+
     // CAMERA PROPERTIES
     // var canvas = document.getElementById('canvas');
     // var context = canvas.getContext('2d');
@@ -453,7 +476,7 @@ $(document).ready(function() {
 
     // TEMPLATE ROUTINGS
     $("#btnViewCart").click(function() {
-        alert('PRODUCT');
+        toastr.success('Products loaded successfully...');
     });
     $('#btn-about-us').click(event => {
         window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/about.html';
