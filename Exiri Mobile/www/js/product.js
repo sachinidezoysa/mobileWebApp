@@ -461,6 +461,10 @@ $(document).ready(function() {
     $('#btn-about-us').click(event => {
         window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/about.html';
     });
+    $('#btn-contact-us').click(() => {
+        window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/contact.html';
+    });
+
 
     // OPEN CAMERA
     $('#btn-camera').click(event => {
