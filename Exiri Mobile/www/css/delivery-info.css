@@ -1,0 +1,94 @@
+@media only screen and (min-width: 400px) {}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: calc(106vh - 60px);
+}
+
+.logo {
+    width: 10vh;
+    height: auto;
+}
+
+.header {
+    display: flex;
+    margin: 4px 4px 0px 4px;
+}
+
+.header>span {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.notification,
+.profile {
+    width: 3.5vh;
+    height: auto;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.content {
+    flex: 1;
+}
+
+.content>.back {
+    justify-content: unset !important;
+    height: 5%;
+}
+
+.content>.back>span>b {
+    font-size: 5vw;
+    color: orangered;
+}
+
+.content>.content-body {
+    height: 95%;
+}
+
+.content>.content-body>div {
+    background-color: rebeccapurple;
+    flex: 1;
+    margin: 2vh;
+    box-shadow: 0 0 2px 0px black;
+    border-radius: 3px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    height: 5vh;
+    background: #05053a;
+}
+
+.footer>span {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer>span>img {
+    width: 3.5vh;
+    cursor: pointer;
+}
+
+.footer>span>.cart {
+    position: absolute;
+    top: -2.9vh;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+    background: #E5D600;
+    display: flex;
+    justify-content: center;
+}
+
+.footer>span>.cart>img {
+    width: 3.5vh;
+    cursor: pointer;
+}
