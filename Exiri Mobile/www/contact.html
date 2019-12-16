@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Javascripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/about.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>CONTACT US</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <img class="logo" src="img/exiri.png">
+            <span>
+                <img class="notification" src="img/bell.svg">
+                <img class="profile" src="img/user.svg">
+            </span>
+
+        </div>
+
+
+        <div class="content">
+
+            <!-- NAVIGATION -->
+            <div class="back horizontal">
+                <span class="vertical">
+                    <i class="fa fa-angle-left nav-back" aria-hidden="true"></i>
+                </span>
+                <span class="vertical"><b>Contact Us</b></span>
+            </div>
+
+
+            <div class="container-contact100" style="background-image: url('images/bg-01.jpg');">
+                <div class="wrap-contact100">
+                    <div>
+                        <span class="horizontal icon-grp">
+                            <i style="font-size:30px;color: green" class="fa">&#xf095;</i>
+                            <strong class="vertical">123456789</strong>
+                        </span>
+                        <span class="horizontal icon-grp">
+                            <i style="font-size:30px;color: blue" class="fa">&#xf003;</i>
+                            <strong class="vertical">Xsiri@gmail.com</strong>
+                        </span>
+                    </div>
+
+                    <form class="contact100-form validate-form">
+
+
+                        <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+                            <span class="label-input100"><em>Tell us your name *</em></span>
+                            </br>
+                            <input class="input100" type="text" name="name" placeholder="Enter your name">
+                        </div>
+
+                        <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                            <span class="label-input100"><em>Enter your email *</em></span>
+                            </br>
+                            <input class="input100" type="text" name="email" placeholder="Enter your email">
+                        </div>
+
+
+                        <div class="wrap-input100 validate-input" data-validate="Message is required">
+                            <span class="label-input100"><em>Message</em></span>
+                            </br>
+                            <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+                        </div>
+
+                        <div class="container-contact100-form-btn">
+                            <div class="wrap-contact100-form-btn">
+                                <div class="contact100-form-bgbtn"></div>
+                                <button class="contact100-form-btn">
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <h1>Head office </h1>
+                    <h5>Bank of america <br>colombo 06</h5>
+                </div>
+
+                <div class="map-content">
+                    <div id="googleMap" style="width:100%;height:170px;"></div>
+                    <script>
+                        function myMap() {
+                            var mapProp = {
+                                center: new google.maps.LatLng(6.865345, 79.859783),
+                                zoom: 18,
+                            };
+                            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                        }
+                    </script>
+
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6OxB7iNmcuHCH2R4OUvTU44u8OpLx-dY&callback=myMap"></script>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- </div> -->
+
+
+
+
+
+
+        <div class="footer">
+            <span>
+                <img src="img/home.svg">
+            </span>
+            <span>
+                <div class="cart">
+                    <img id="btnViewCart" src="img/shopping-cart.svg">
+                </div>
+            </span>
+            <span>
+                <img src="img/dashboard.svg">
+            </span>
+        </div>
+
+    </div>
+</body>
+
+</html>
