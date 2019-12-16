@@ -412,6 +412,9 @@ var arrProducts = [{
 
 $(document).ready(function() {
 
+    // INITIAL LOADER
+    setTimeout(function() { $('.loader').css('display', 'none'); }, 3000);
+
     // CAMERA PROPERTIES
     // var canvas = document.getElementById('canvas');
     // var context = canvas.getContext('2d');
