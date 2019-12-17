@@ -30,6 +30,9 @@
     .content>.search-and-promo>.promo-slider {
         height: 22vw;
     }
+    .footer {
+        margin-bottom: 3vw !important;
+    }
 }
 
 
@@ -59,7 +62,7 @@
     .camera {
         position: absolute;
         right: 4vh;
-        top: 3vh;
+        top: 2.5vh;
         font-size: 3vh;
     }
     .hide-for-IP-L {
@@ -162,6 +165,14 @@
         height: 10vw !important;
         margin-top: 20px !important;
     }
+    .slider-IP-L {
+        height: 10vw !important;
+        margin-top: 20px !important;
+        visibility: visible !important;
+        position: relative !important;
+        width: 100% !important;
+        top: 0 !important;
+    }
 }
 
 
@@ -258,13 +269,18 @@
 
 .show-for-IP-L {
     visibility: hidden;
-    width: 0;
-    height: 0 !important;
     position: absolute;
 }
 
 .ipad-l {
     display: none;
+}
+
+.slider-IP-L {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -50vh;
 }
 
 .logo {

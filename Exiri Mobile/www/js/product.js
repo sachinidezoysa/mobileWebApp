@@ -544,7 +544,7 @@ $(document).ready(function() {
     });
 
     // CATEGORY CLICK
-    $('#cat-item').click(event => {
+    $('.category').click(event => {
         switch (event.target.innerText.toLowerCase()) {
             case 'electronics':
                 setCategoryData(categories.electronics);
@@ -568,7 +568,7 @@ $(document).ready(function() {
     }
 
     // INITIAL ITEM CATEGORIZE AND INSERTION
-    arrProducts.forEach(item => {
+    arrProducts.forEach((item, key) => {
         if (item.isFavourite) {
             let favNode =
                 "<tr><td>" +
@@ -592,7 +592,7 @@ $(document).ready(function() {
             "<tr class='seperate'><td class='gen-td'>" +
             "<div class='gen-item-card item-card vertical'>" +
             "<div class='card-content-1'>" +
-            "<span>" + (item.isFavourite ? "<i class='fa fa-heart' aria-hidden='true'> </i>" : "<i class='fa fa-heart-o' aria-hidden='true'> </i>") + "</span>" +
+            "<span class='add-to-fav' id='" + (key + 1) + "'>" + (item.isFavourite ? "<i class='fa fa-heart' aria-hidden='true'> </i>" : "<i class='fa fa-heart-o' aria-hidden='true'> </i>") + "</span>" +
             "<span> <i class='fa fa-share-alt' aria-hidden='true'></i> </span>" +
             "</div>" +
             "<div class='card-content-2 vertical'>" +
@@ -605,6 +605,35 @@ $(document).ready(function() {
             "</div>" +
             "</td></tr>";
         $('#general-product-table tr:last').after(genNode);
+    });
+
+    // ADD ITEM TO FAVOURITE
+    $('.add-to-fav').click(event => {
+        var item = arrProducts[event.currentTarget.id - 1];
+        if (item.isFavourite) {
+            toastr.warning("Already Exists in Favourites!");
+            return;
+        }
+        let favNode =
+            "<tr><td>" +
+            "<div class='item-card favourite vertical'>" +
+            "<div class='card-content-1'>" +
+            "<span> <i class='fa fa-heart' aria-hidden='true'></i> </span>" +
+            "<span> <i class='fa fa-share-alt' aria-hidden='true'></i> </span>" +
+            "</div>" +
+            "<div class='card-content-2 vertical'>" +
+            "<img src=" + item.image[0] + ">" +
+            "</div>" +
+            "<div class='card-content-3 vertical'>" +
+            "<span>" + item.name + "</span>" +
+            "<span> <strong> Rs." + item.price + "</strong> </span>" +
+            "</div>" +
+            "</div>" +
+            "</td></tr>";
+        $('#fav-product-table tr:last').after(favNode);
+        event.currentTarget.children[0].className = "fa fa-heart";
+        arrProducts[event.currentTarget.id - 1].isFavourite = true;
+        toastr.success("Successfully added to favourites");
     });
 
 
