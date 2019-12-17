@@ -49,11 +49,13 @@
 }
 
 .content>.content-body>div {
-    background-color: rebeccapurple;
     flex: 1;
     margin: 2vh;
     box-shadow: 0 0 2px 0px black;
     border-radius: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#75816b;
+    font-size: 10;
 }
 
 
