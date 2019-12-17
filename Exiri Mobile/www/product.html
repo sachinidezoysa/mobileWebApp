@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/product.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+    <!-- Javascripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/product.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <title> Exiri Products </title>
+</head>
+
+<body>
+    <div class="page">
+
+        <div class="loader vertical">
+            <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            Gathering Items...
+        </div>
+
+        <!-- CAMERA -->
+        <video id="video" width="640" height="480" autoplay></video>
+        <!-- <canvas id="canvas" width="640" height="480"></canvas> -->
+        <span id="cam-close" class="camera-close"> <li class="fa fa-times-circle" aria-hidden="true"></li> </span>
+
+        <div class="header">
+            <img class="logo" src="img/exiri.png">
+            <span>
+                <img class="notification" src="img/bell.svg">
+                <img class="profile" src="img/user.svg">
+            </span>
+        </div>
+
+        <div id="cont" class="content vertical">
+            <div class="search-and-promo vertical">
+                <span>
+                    <input class="horizontal" type="text" placeholder="Search Products">
+                    <span id="btn-camera" class="camera"> <li class="fa fa-camera" aria-hidden="true"> </li></span>
+                </span>
+                <div id="slider" class="promo-slider horizontal" style="background-image: url('img/offer1.jpg')">
+                    <span class="column-1 vertical"> 
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </span>
+                    <span class="column-2 text"> 
+                        50% Offer on All Selected Mobile Phones
+                    </span>
+                    <span class="column-3 vertical"> 
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="categories-options">
+                <div class="options horizontal">
+                    <div class="option">
+                        <div> <i class="fa fa-credit-card" aria-hidden="true"></i> </div>
+                        <span> Payment Plan </span>
+                    </div>
+                    <div class="option">
+                        <div id="btn-contact-us"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
+                        <span> Contact Us </span>
+                    </div>
+                    <div class="option">
+                        <div> <i class="fa fa-fire" aria-hidden="true"></i> </div>
+                        <span> eXiri Mall </span>
+                    </div>
+                    <div class="option">
+                        <div id="btn-about-us"> <i class="fa fa-users" aria-hidden="true"></i> </div>
+                        <span> About Us </span>
+                    </div>
+                    <div class="option">
+                        <div id="btn-Delivery-info"> <i class="fa fa-info" aria-hidden="true"></i> </div>
+                        <span> Delivery Info </span>
+                    </div>
+                </div>
+                <div class="categories horizontal">
+                    <div class="category">
+                        <span> Health & Beauty </span>
+                    </div>
+                    <div class="category">
+                        <span> Electornics </span>
+                    </div>
+                    <div class="category">
+                        <span> Fashion & Trend </span>
+                    </div>
+                    <div class="category">
+                        <span> Food & Beverages </span>
+                    </div>
+                    <div class="category">
+                        <span> Ladies Wear </span>
+                    </div>
+                    <div class="category">
+                        <span> Men's Wear </span>
+                    </div>
+                    <div class="category">
+                        <span> Gift & Soveniours </span>
+                    </div>
+                </div>
+            </div>
+            <!-- this will change later -->
+
+            <div class="product-items">
+                <span class="prod-title"> Favourites </span>
+                <div class="fav-category">
+                    <table id="fav-product-table">
+                        <tbody class="fav-product-tbody">
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <span class="prod-title"> Products </span>
+                <div id="wrap" class="gen-category">
+                    <table id="general-product-table">
+                        <tbody class="product-tbody">
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>
+                <span>
+                <img src="img/home.svg">
+            </span>
+                <span>
+                <div class="cart">
+                    <img id="btnViewCart" src="img/shopping-cart.svg">
+                </div>
+            </span>
+                <span>
+                <img src="img/dashboard.svg">
+            </span>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
