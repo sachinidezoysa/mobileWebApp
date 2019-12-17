@@ -1,0 +1,149 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    height: calc(103vh - 60px);
+    overflow: auto;
+    justify-content: flex-start !important;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.page>.A {
+    height: max-content;
+}
+
+.page>.A>.slide>#slider {
+    height: 50vh;
+}
+
+.page>.A>.slide>.promo-slider {
+    height: 25vw;
+    margin-top: 10px;
+    background: chocolate;
+    border-radius: 14px;
+    background-image: url('img/offer1.jpg');
+    color: #fff;
+    padding: 10px;
+}
+
+.page>.A>.slide>.promo-slider>.column-1 {
+    flex: 0;
+    font-size: 3vh;
+}
+
+.page>.A>.slide>.promo-slider>.column-2 {
+    flex: 1;
+    font-size: 2.5vh;
+    text-align: center;
+    font-family: cursive;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page>.A>.slide>.promo-slider>.column-3 {
+    flex: 0;
+    font-size: 3vh;
+}
+
+.page>.A>.purchase-wishlist {
+    height: 24vh;
+    background-color: black;
+}
+
+.page>.A>.purchase-wishlist>.purchase {
+    flex: 1;
+    background-color: #291e40;
+    border: 2px #291e40;
+    border-radius: 43px;
+    margin: 7px;
+}
+
+.page>.A>.purchase-wishlist>.wishlist {
+    flex: 1;
+    background-color: #291e40;
+    border: 2px #291e40;
+    border-radius: 43px;
+    margin: 7px;
+}
+
+.page>.A>.bar-chart {
+    height: 30vh;
+    background-color: black;
+    border: 2px #291e40;
+    border-radius: 43px;
+    color: thistle;
+    padding: 19px;
+}
+
+.page>.B {
+    height: max-content;
+}
+
+.cirlce {
+    height: max-content;
+    background-color: #291e40;
+    border: 2px #291e40;
+    border-radius: 43px;
+    color: thistle;
+    margin: 12px 10px 14px 12px;
+    overflow: hidden;
+}
+
+.page>.B>.members {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    background-color: #291e40;
+    border: 2px #291e40;
+    border-radius: 43px;
+    color: thistle;
+    margin: 11px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    height: 4.5vh;
+    justify-content: center;
+}
+
+.footer>div {
+    display: flex;
+    width: 100%;
+    background: #05053a;
+}
+
+.footer>div>span {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer>div>span>img {
+    width: 3.5vh;
+    cursor: pointer;
+}
+
+.footer>div>span>.cart {
+    position: absolute;
+    top: -2.9vh;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+    background: #E5D600;
+    display: flex;
+    justify-content: center;
+}
+
+.footer>div>span>.cart>img {
+    width: 25px;
+    cursor: pointer;
+}
