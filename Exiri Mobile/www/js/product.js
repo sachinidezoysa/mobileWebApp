@@ -408,6 +408,23 @@ var arrProducts = [{
     }
 ];
 
+var categories = {
+    electronics: [
+        { name: 'TV', stock: 20, img: 'img/bell.svg' },
+        { name: 'TV', stock: 20, img: 'img/bell.svg' },
+        { name: 'TV', stock: 20, img: 'img/bell.svg' },
+        { name: 'TV', stock: 20, img: 'img/bell.svg' },
+        { name: 'TV', stock: 20, img: 'img/bell.svg' },
+        { name: 'TV', stock: 20, img: 'img/bell.svg' },
+        { name: 'TV', stock: 20, img: 'img/bell.svg' },
+        { name: 'TV', stock: 20, img: 'img/bell.svg' }
+    ],
+    health: [
+        { name: 'Panadol', stock: 2151, img: 'img/bell.svg' },
+        { name: 'Panadol', stock: 2151, img: 'img/bell.svg' }
+    ]
+};
+
 
 
 $(document).ready(function() {
@@ -473,7 +490,6 @@ $(document).ready(function() {
         }, 5000);
     });
 
-
     // TEMPLATE ROUTINGS
     $("#btnViewCart").click(function() {
         toastr.success('Products loaded successfully...');
@@ -527,6 +543,29 @@ $(document).ready(function() {
         }
     });
 
+    // CATEGORY CLICK
+    $('#cat-item').click(event => {
+        switch (event.target.innerText.toLowerCase()) {
+            case 'electronics':
+                setCategoryData(categories.electronics);
+                break;
+            case 'health & beauty':
+                setCategoryData(categories.health);
+                break;
+        }
+    });
+
+    function setCategoryData(param) {
+        var div = document.getElementById('modalbody');
+        for (var x = 0; x < param.length; x++) {
+            var textnode = "<div class='sub-cat horizontal'>" +
+                "<img src='" + param[x].img + "'>" +
+                "<span style='flex:1;' class='vertical'>" + param[x].name + "</span>" +
+                "<strong class='vertical'> (" + param[x].stock + ") </strong>" +
+                "</div>";
+            div.innerHTML += textnode;
+        }
+    }
 
     // INITIAL ITEM CATEGORIZE AND INSERTION
     arrProducts.forEach(item => {

@@ -50,6 +50,26 @@
     background-color: #e0e0e0;
 }
 
+.modal {
+    padding: 10px !important;
+    max-height: 50vh !important;
+}
+
+.modalbody {
+    overflow: scroll;
+    height: 43vh;
+    justify-content: flex-start;
+}
+
+.modal a.close-modal {
+    position: absolute;
+    top: 2.5px !important;
+    right: 2.5px !important;
+    display: block !important;
+    width: 22px !important;
+    height: 22px !important;
+}
+
 .lds-roller {
     display: inline-block;
     position: relative;

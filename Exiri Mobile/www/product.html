@@ -13,17 +13,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <!-- Javascripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/product.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
     <title> Exiri Products </title>
 </head>
 
 <body>
+    <div id="ex1" class="modal">
+        <span class="mod-title"> Select sub-category </span>
+        <a href="#" rel="modal:close">Close</a>
+        <div id="modalbody" class="modalbody vertical">
+        </div>
+    </div>
+
     <div class="page">
 
         <div class="loader vertical">
@@ -126,71 +134,100 @@
                 </div>
                 <div class="categories horizontal">
                     <div class="category">
-                        <span class="default-font"> Health & Beauty </span class="default-font">
+                        <span class="default-font"> 
+                            <a id="cat-item" href="#ex1" rel="modal:open"> Health & Beauty </a>
+                        </span class="default-font">
                     </div>
                     <div class="category">
-                        <span class="default-font"> Electornics </span class="default-font">
+                        <span class="default-font"> 
+                            <a id="cat-item" href="#ex1" rel="modal:open"> Electronics </a>
+                        </span class="default-font">
                     </div>
                     <div class="category">
-                        <span class="default-font"> Fashion & Trend </span class="default-font">
+                        <span class="default-font"> 
+                            <a id="cat-item" href="#ex1" rel="modal:open"> Fashion & Trend </a>
+                        </span class="default-font">
                     </div>
                     <div class="category">
-                        <span class="default-font"> Food & Beverages </span class="default-font">
+                        <span class="default-font"> 
+                            <a id="cat-item" href="#ex1" rel="modal:open"> Food & Beverages </a>
+                        </span class="default-font">
                     </div>
                     <div class="category">
-                        <span class="default-font"> Ladies Wear </span class="default-font">
+                        <span class="default-font"> 
+                            <a id="cat-item" href="#ex1" rel="modal:open"> Ladies Wear </a>
+                        </span class="default-font">
                     </div>
                     <div class="category">
-                        <span class="default-font"> Men's Wear </span class="default-font">
+                        <span class="default-font"> 
+                            <a id="cat-item" href="#ex1" rel="modal:open"> Men's Wear </a>
+                        </span class="default-font">
                     </div>
                     <div class="category">
-                        <span class="default-font"> Gift & Soveniours </span class="default-font">
+                        <span class="default-font"> 
+                            <a id="cat-item" href="#ex1" rel="modal:open"> Gift & Soveniours </a>
+                        </span class="default-font">
                     </div>
                 </div>
             </div>
             <!-- this will change later -->
 
             <div class="product-items">
-                <span class="prod-title"> Favourites </span>
-                        <div class="fav-category">
-                            <table id="fav-product-table">
-                                <tbody class="fav-product-tbody">
-                                    <tr>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <span class="prod-title"> Products </span>
-                        <div id="wrap" class="gen-category">
-                            <table id="general-product-table">
-                                <tbody class="product-tbody">
-                                    <tr>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="fav-wrapper">
+                        <div id="slider" class="promo-slider horizontal show-for-IP-L" style="background-image: url('img/offer1.jpg')">
+                            <span class="column-1 vertical"> 
+                                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                </span>
+                        <span class="column-2 text"> 
+                                    50% Offer on All Selected Mobile Phones
+                                </span>
+                        <span class="column-3 vertical"> 
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </span>
+                    </div>
+                    <span class="prod-title"> Favourites </span>
+                    <div class="fav-category">
+                        <table id="fav-product-table">
+                            <tbody class="fav-product-tbody">
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="gen-wrapper">
+                    <span class="prod-title"> Products </span>
+                    <div id="wrap" class="gen-category">
+                        <table id="general-product-table">
+                            <tbody class="product-tbody">
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
-                <div class="footer">
-                    <div>
-                        <span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>
+                <span>
                                 <img src="img/home.svg">
                             </span>
-                        <span>
+                <span>
                                 <div class="cart">
                                     <img id="btnViewCart" src="img/shopping-cart.svg">
                                 </div>
                             </span>
-                        <span>
+                <span>
                                 <img src="img/dashboard.svg">
                             </span>
-                    </div>
-                </div>
             </div>
+        </div>
+    </div>
 </body>
 
 </html>
