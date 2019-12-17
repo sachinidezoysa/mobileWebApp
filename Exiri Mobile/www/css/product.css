@@ -13,6 +13,104 @@
     .gen-item-card>.card-content-2>img {
         width: 13vh !important;
     }
+    .footer>div {
+        width: 70% !important;
+        border-radius: 20px 20px 0px 0px !important;
+    }
+    .content>.search-and-promo>span>input {
+        height: 4vh !important;
+        font-size: 2vh !important;
+    }
+    .content>.search-and-promo>span>.camera {
+        position: absolute;
+        right: 4%;
+        top: 1px;
+        font-size: 2.5vh;
+    }
+    .content>.search-and-promo>.promo-slider {
+        height: 22vw;
+    }
+}
+
+
+/* IPAD LANDSCAPE */
+
+@media only screen and (min-width: 1000px) and (min-height: 750px) {
+    .content {
+        width: 95% !important;
+        margin-top: 6vw !important;
+        flex-direction: row !important;
+    }
+    .default-font {
+        font-size: 2.5vh !important;
+    }
+    .options-font {
+        font-size: 2vh !important;
+    }
+    .profile {
+        width: 5.5vh !important;
+        margin-top: 10px !important;
+        margin-right: 5px !important;
+    }
+    .camera {
+        position: absolute;
+        right: 4vh;
+        top: 3vh;
+        font-size: 3vh;
+    }
+    .hide-for-IP-L {
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        position: absolute !important;
+    }
+    .show-for-IP-L {
+        visibility: visible !important;
+        width: unset !important;
+        height: unset !important;
+    }
+    .primary-search {
+        margin-top: 15px !important;
+    }
+    .content>.categories-options {
+        width: 15%;
+        margin: 0 10px !important;
+    }
+    .options>.option {
+        min-width: max-content !important;
+    }
+    .content>.categories-options>.categories>.category {
+        min-width: 16vh !important;
+        min-height: 6vw !important;
+        margin: auto !important;
+    }
+    .content>.categories-options>.categories {
+        flex-direction: column;
+        height: 100%;
+    }
+    .footer {
+        position: absolute !important;
+        right: 0 !important;
+        height: 100% !important;
+        flex-direction: column !important;
+    }
+    .footer>div {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 65% !important;
+        width: 4vw !important;
+        border-radius: 20px 0px 0px 20px !important;
+    }
+    .footer>div>span>.cart {
+        position: absolute !important;
+        top: 5.1vh !important;
+        width: 7vh !important;
+        left: -23px !important;
+        height: 7vh !important;
+    }
+    .logo {
+        width: 15vh !important;
+    }
 }
 
 
@@ -73,6 +171,9 @@
     .content>.categories-options>.options>.option {
         min-width: max-content !important;
     }
+    .default-font {
+        font-size: 2.7vh !important;
+    }
 }
 
 
@@ -84,6 +185,16 @@
     height: calc(106vh - 60px);
 }
 
+.show-for-IP-L {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.ipad-l {
+    display: none;
+}
+
 .logo {
     width: 10vh;
     height: auto;
@@ -92,12 +203,27 @@
 .header {
     display: flex;
     margin: 4px 4px 0px 4px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
 }
 
 .header>span {
     display: flex;
     flex: 1;
     justify-content: flex-end;
+    position: relative;
+}
+
+.header>.options-wrapper {
+    overflow-x: auto;
+}
+
+.header>.search-wrapper {}
+
+.header>span:nth-child(4) {
+    margin-right: 5px;
+    flex: 0;
 }
 
 .notification,
@@ -110,6 +236,7 @@
 
 #video {
     height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     background-color: rgba(0, 0, 0, 0.9098039215686274);
@@ -146,7 +273,7 @@
 /* MAIN CONTENT */
 
 .content {
-    margin-top: 5px;
+    margin-top: 8vw;
     flex: 1;
     overflow-x: auto;
     justify-content: flex-start !important;
@@ -168,22 +295,22 @@
     top: 5px;
 }
 
-.content>.search-and-promo>span>input {
+
+/* .content>.search-and-promo>span>input {
     margin: 0 auto;
     width: 95%;
-    /* min-height: 6vw; */
     font-weight: 500;
     text-align: center;
     border-radius: 25px;
     padding: 5px;
     border: none;
     background-color: #e0e0e0;
-}
+} */
 
 .content>.search-and-promo>.promo-slider {
     height: 25vw;
     margin-top: 10px;
-    background: chocolate;
+    background-size: cover;
     border-radius: 14px;
     background-image: url('img/offer1.jpg');
     color: #fff;
@@ -216,18 +343,18 @@
     height: 100%;
 }
 
-.content>.categories-options>.options {
+.options {
     overflow-x: auto;
-    justify-content: flex-start;
+    justify-content: flex-start !important;
 }
 
-.content>.categories-options>.options>.option {
+.options>.option {
     margin: auto;
     min-width: 25vw;
     text-align: center;
 }
 
-.content>.categories-options>.options>.option>div {
+.options>.option>div {
     width: 4.5vh;
     height: 4.5vh;
     border-radius: 50%;
@@ -239,34 +366,34 @@
     margin: auto;
 }
 
-.content>.categories-options>.options>div:nth-child(1)>div {
+.options>div:nth-child(1)>div {
     background: rgb(182, 3, 137);
 }
 
-.content>.categories-options>.options>div:nth-child(2)>div {
+.options>div:nth-child(2)>div {
     background: green;
 }
 
-.content>.categories-options>.options>div:nth-child(3)>div {
+.options>div:nth-child(3)>div {
     background: rgb(206, 67, 3);
 }
 
-.content>.categories-options>.options>div:nth-child(4)>div {
+.options>div:nth-child(4)>div {
     background: rgb(202, 1, 1);
 }
 
-.content>.categories-options>.options>div:nth-child(5)>div {
+.options>div:nth-child(5)>div {
     background: rgb(70, 4, 156);
 }
 
-.content>.categories-options>.options>.option>span {
+.options>.option>span {
     white-space: nowrap;
     margin: 0 10px;
 }
 
 .content>.categories-options>.categories {
     overflow-x: auto;
-    justify-content: flex-start;
+    justify-content: flex-start !important;
 }
 
 .content>.categories-options>.categories>.category {

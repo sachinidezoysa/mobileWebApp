@@ -47,16 +47,45 @@
 
         <div class="header">
             <img class="logo" src="img/exiri.png">
+            <span class="show-for-IP-L options-wrapper">
+                <div class="options horizontal">
+                    <div class="option">
+                        <div> 
+                            <i class="fa fa-credit-card" aria-hidden="true"></i> 
+                        </div>
+                        <span class="default-font options-font"> Payment </span>
+        </div>
+        <div class="option">
+            <div id="btn-contact-us-2"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
+            <span class="default-font options-font"> Contact Us </span class="default-font">
+                            </div>
+                            <div class="option">
+                                <div> <i class="fa fa-fire" aria-hidden="true"></i> </div>
+                                <span class="default-font options-font"> eXiri Mall </span class="default-font">
+                            </div>
+                            <div class="option">
+                                <div id="btn-about-us-2"> <i class="fa fa-users" aria-hidden="true"></i> </div>
+                                <span class="default-font options-font"> About Us </span class="default-font">
+                            </div>
+                            <div class="option">
+                                <div> <i class="fa fa-info" aria-hidden="true"></i> </div>
+                                <span class="default-font options-font"> Delivery Info </span class="default-font">
+                            </div>
+                </div>
+            </span>
+            <span class="show-for-IP-L Search-wrapper"> 
+                <input class="horizontal primary-search" type="text" placeholder="Search Products">
+                <span id="btn-camera-2" class="camera"> <li class="fa fa-camera" aria-hidden="true"> </li></span>
+            </span>
             <span>
-                <img class="notification" src="img/bell.svg">
                 <img class="profile" src="img/user.svg">
             </span>
         </div>
 
         <div id="cont" class="content vertical">
-            <div class="search-and-promo vertical">
+            <div class="search-and-promo vertical hide-for-IP-L">
                 <span>
-                    <input class="horizontal" type="text" placeholder="Search Products">
+                    <input class="horizontal primary-search" type="text" placeholder="Search Products">
                     <span id="btn-camera" class="camera"> <li class="fa fa-camera" aria-hidden="true"> </li></span>
                 </span>
                 <div id="slider" class="promo-slider horizontal" style="background-image: url('img/offer1.jpg')">
@@ -73,49 +102,49 @@
             </div>
 
             <div class="categories-options">
-                <div class="options horizontal">
+                <div class="options hide-for-IP-L horizontal">
                     <div class="option">
                         <div> <i class="fa fa-credit-card" aria-hidden="true"></i> </div>
-                        <span> Payment Plan </span>
+                        <span class="default-font"> Payment </span>
                     </div>
                     <div class="option">
                         <div id="btn-contact-us"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
-                        <span> Contact Us </span>
+                        <span class="default-font"> Contact Us </span class="default-font">
                     </div>
                     <div class="option">
                         <div> <i class="fa fa-fire" aria-hidden="true"></i> </div>
-                        <span> eXiri Mall </span>
+                        <span class="default-font"> eXiri Mall </span class="default-font">
                     </div>
                     <div class="option">
                         <div id="btn-about-us"> <i class="fa fa-users" aria-hidden="true"></i> </div>
-                        <span> About Us </span>
+                        <span class="default-font"> About Us </span class="default-font">
                     </div>
                     <div class="option">
                         <div> <i class="fa fa-info" aria-hidden="true"></i> </div>
-                        <span> Delivery Info </span>
+                        <span class="default-font"> Delivery Info </span class="default-font">
                     </div>
                 </div>
                 <div class="categories horizontal">
                     <div class="category">
-                        <span> Health & Beauty </span>
+                        <span class="default-font"> Health & Beauty </span class="default-font">
                     </div>
                     <div class="category">
-                        <span> Electornics </span>
+                        <span class="default-font"> Electornics </span class="default-font">
                     </div>
                     <div class="category">
-                        <span> Fashion & Trend </span>
+                        <span class="default-font"> Fashion & Trend </span class="default-font">
                     </div>
                     <div class="category">
-                        <span> Food & Beverages </span>
+                        <span class="default-font"> Food & Beverages </span class="default-font">
                     </div>
                     <div class="category">
-                        <span> Ladies Wear </span>
+                        <span class="default-font"> Ladies Wear </span class="default-font">
                     </div>
                     <div class="category">
-                        <span> Men's Wear </span>
+                        <span class="default-font"> Men's Wear </span class="default-font">
                     </div>
                     <div class="category">
-                        <span> Gift & Soveniours </span>
+                        <span class="default-font"> Gift & Soveniours </span class="default-font">
                     </div>
                 </div>
             </div>
@@ -123,46 +152,45 @@
 
             <div class="product-items">
                 <span class="prod-title"> Favourites </span>
-                <div class="fav-category">
-                    <table id="fav-product-table">
-                        <tbody class="fav-product-tbody">
-                            <tr>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <div class="fav-category">
+                            <table id="fav-product-table">
+                                <tbody class="fav-product-tbody">
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <span class="prod-title"> Products </span>
+                        <div id="wrap" class="gen-category">
+                            <table id="general-product-table">
+                                <tbody class="product-tbody">
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
-                <span class="prod-title"> Products </span>
-                <div id="wrap" class="gen-category">
-                    <table id="general-product-table">
-                        <tbody class="product-tbody">
-                            <tr>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="footer">
+                    <div>
+                        <span>
+                                <img src="img/home.svg">
+                            </span>
+                        <span>
+                                <div class="cart">
+                                    <img id="btnViewCart" src="img/shopping-cart.svg">
+                                </div>
+                            </span>
+                        <span>
+                                <img src="img/dashboard.svg">
+                            </span>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="footer">
-            <div>
-                <span>
-                <img src="img/home.svg">
-            </span>
-                <span>
-                <div class="cart">
-                    <img id="btnViewCart" src="img/shopping-cart.svg">
-                </div>
-            </span>
-                <span>
-                <img src="img/dashboard.svg">
-            </span>
-            </div>
-        </div>
-
-    </div>
 </body>
 
 </html>

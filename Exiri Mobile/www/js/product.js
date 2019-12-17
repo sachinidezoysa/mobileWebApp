@@ -433,7 +433,7 @@ $(document).ready(function() {
     // INITIAL LOADER
     setTimeout(function() {
         $('.loader').css('display', 'none');
-    }, 3000);
+    }, 1500);
 
     // CAMERA PROPERTIES
     // var canvas = document.getElementById('canvas');
@@ -450,11 +450,11 @@ $(document).ready(function() {
         if ($(".page").height() < 450) {
             return;
         }
-        if (this.scrollTop > 167) {
-            el.addClass("scroll-enable");
-        } else {
-            el.removeClass("scroll-enable");
-        }
+        // if (this.scrollTop > 167) {
+        //     el.addClass("scroll-enable");
+        // } else {
+        //     el.removeClass("scroll-enable");
+        // }
     });
 
     // IMAGE SLIDESHOW HANDLER
