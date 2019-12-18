@@ -26,7 +26,6 @@ Exiri Mobile/www/img/lock.svg
 Exiri Mobile/www/img/loyalty.svg
 Exiri Mobile/www/img/user.svg
 Exiri Mobile/www/img/world-globe.svg
-Exiri Mobile/www/js/index.js
 Exiri Mobile/platforms/browser/www/login.html
 Exiri Mobile/platforms/browser/www/css/login.css
 Exiri Mobile/platforms/browser/www/img/calendar.svg
@@ -94,3 +93,4 @@ Exiri Mobile/platforms/browser/www/css/login.css
 Exiri Mobile/platforms/browser/www/js/index.js
 Exiri Mobile/platforms/browser/www/js/login.js
 Exiri Mobile/platforms/browser/www/plugins/cordova-plugin-file/www/browser/Preparing.js
+Exiri Mobile/platforms/browser/www/img/deli1.png

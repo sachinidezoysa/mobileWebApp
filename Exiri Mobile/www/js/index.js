@@ -17,12 +17,13 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        window.location.href = window.location.href + 'product.html';
+        window.location.href = window.location.href + 'login.html';
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
+            var parentElement = document.getElementById(id);
 
-        console.log('Received Event: ' + id);
-    }
+            console.log('Received Event: ' + id);
+        }
+        // 
 }

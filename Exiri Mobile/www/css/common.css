@@ -1,5 +1,3 @@
-/* .primary-search-bar {} */
-
 .vertical {
     display: flex;
     flex-direction: column;
@@ -35,6 +33,41 @@
 
 .b {
     font-weight: bold;
+}
+
+.default-font {
+    font-size: 1.9vh;
+}
+
+.primary-search {
+    margin: 0 auto;
+    width: 95%;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 25px;
+    padding: 5px;
+    border: none;
+    background-color: #e0e0e0;
+}
+
+.modal {
+    padding: 10px !important;
+    max-height: 50vh !important;
+}
+
+.modalbody {
+    overflow: scroll;
+    height: 43vh;
+    justify-content: flex-start;
+}
+
+.modal a.close-modal {
+    position: absolute;
+    top: 2.5px !important;
+    right: 2.5px !important;
+    display: block !important;
+    width: 22px !important;
+    height: 22px !important;
 }
 
 .lds-roller {
