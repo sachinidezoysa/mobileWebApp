@@ -25,7 +25,8 @@ $(document).ready(function() {
     $("#chartContainer").CanvasJSChart(options);
 
     var options = {
-        dataPointWidth: 15,
+        animationEnabled: true,
+        dataPointWidth: 12,
         backgroundColor: "black",
         theme: "dark2",
         axisX: {

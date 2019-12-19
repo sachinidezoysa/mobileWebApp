@@ -51,8 +51,9 @@ body {
 }
 
 .page>.A>.purchase-wishlist {
-    height: 24vh;
+    height: 19vh;
     background-color: black;
+    color: whitesmoke;
 }
 
 .page>.A>.purchase-wishlist>.purchase {
