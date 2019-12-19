@@ -1,7 +1,17 @@
 $(document).ready(function() {
     // PROMOTION SLIDER IMAGES
     var images = ["offer1.jpg", "offer2.png", "offer3.jpg", "offer4.jpg", "offer5.jpg", "offer6.jpg"];
+    var leaderBoard = {
+        shifan: 5,
+        banu: 7,
+        mushtharq: 8,
+        sachini: 9
+    };
 
+    $("#shifan").css('width', (((100 / leaderBoard.shifan) * Object.keys(leaderBoard).length) + "%"));
+    $("#sachini").css('width', (((100 / leaderBoard.sachini) * Object.keys(leaderBoard).length) + "%"));
+    $("#banu").css('width', (((100 / leaderBoard.banu) * Object.keys(leaderBoard).length) + "%"));
+    $("#mushtharq").css('width', (((100 / leaderBoard.mushtharq) * Object.keys(leaderBoard).length) + "%"));
 
     var options = {
         animationEnabled: true,
@@ -23,6 +33,12 @@ $(document).ready(function() {
         }]
     };
     $("#chartContainer").CanvasJSChart(options);
+    $("#chartContainer2").CanvasJSChart(options);
+    $(".show-for-L").css('visibility', 'hidden');
+    // $(".show-for-L").css('height', 'max-content');
+    $(".show-for-L").css('position', 'absolute');
+    $(".show-for-L").css('left', '5000vh');
+
 
     var options = {
         animationEnabled: true,
