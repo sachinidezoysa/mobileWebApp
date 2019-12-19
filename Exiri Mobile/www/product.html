@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/product.css" />
     <link rel="stylesheet" type="text/css" href="css/common.css" />
@@ -20,6 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/share/sharer.min.js"></script>
 
     <title> Exiri Products </title>
 </head>
@@ -27,8 +28,9 @@
 <body>
     <div id="ex1" class="modal">
         <span class="mod-title"> Select sub-category </span>
-        <a href="#" rel="modal:close">Close</a>
+        <a id="close-mod" href="#" rel="modal:close">Close</a>
         <div id="modalbody" class="modalbody vertical">
+
         </div>
     </div>
 
@@ -50,9 +52,7 @@
 
         <!-- CAMERA -->
         <video id="video" width="640" height="480" autoplay></video>
-        <!-- <canvas id="canvas" width="640" height="480"></canvas> -->
         <span id="cam-close" class="camera-close"> <li class="fa fa-times-circle" aria-hidden="true"></li> </span>
-
         <div class="header">
             <img class="logo" src="img/exiri.png">
             <span class="show-for-IP-L options-wrapper">
@@ -93,19 +93,19 @@
         <div id="cont" class="content vertical">
             <div class="search-and-promo vertical hide-for-IP-L">
                 <span>
-                    <input class="horizontal primary-search" type="text" placeholder="Search Products">
+                    <input id="search" class="horizontal primary-search" type="text" placeholder="Search Products">
                     <span id="btn-camera" class="camera"> <li class="fa fa-camera" aria-hidden="true"> </li></span>
                 </span>
                 <div id="slider" class="promo-slider horizontal" style="background-image: url('img/offer1.jpg')">
-                    <span class="column-1 vertical"> 
+                    <!-- <span class="column-1 vertical"> 
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    </span>
+                    </span> -->
                     <span class="column-2 text"> 
                         50% Offer on All Selected Mobile Phones
                     </span>
-                    <span class="column-3 vertical"> 
+                    <!-- <span class="column-3 vertical"> 
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </span>
+                    </span> -->
                 </div>
             </div>
 
@@ -133,6 +133,11 @@
                     </div>
                 </div>
                 <div class="categories horizontal">
+                    <div id="clear-filter" class="category">
+                        <span class="default-font"> 
+                            <a id="cat-item" href="#ex1" rel="modal:open"> Clear Filter </a>
+                        </span class="default-font">
+                    </div>
                     <div class="category">
                         <span class="default-font"> 
                             <a id="cat-item" href="#ex1" rel="modal:open"> Health & Beauty </a>
@@ -187,6 +192,9 @@
                     </div>
                     <span class="prod-title"> Favourites </span>
                     <div class="fav-category">
+                        <div id="info" class="info-msg">
+                            <span> You don't have any items added in wishlist! </span>
+                        </div>
                         <table id="fav-product-table">
                             <tbody class="fav-product-tbody">
                                 <tr>
@@ -215,18 +223,27 @@
         <div class="footer">
             <div>
                 <span>
-                                <img src="img/home.svg">
-                            </span>
+                    <img src="img/home.svg">
+                    </span>
                 <span>
-                                <div class="cart">
-                                    <img id="btnViewCart" src="img/shopping-cart.svg">
-                                </div>
-                            </span>
+                    <div class="cart">
+                        <img id="btnViewCart" src="img/shopping-cart.svg">
+                    </div>
+                    </span>
                 <span>
-                                <img src="img/dashboard.svg">
-                            </span>
+                    <img id="btn-db" src="img/dashboard.svg">
+                </span>
             </div>
         </div>
+
+        <div class="share-wrapper horizontal">
+            <span id="hide-share-wrapper"> Hide </span>
+            <div> <img class="share-icon" src="img/whatsapp.svg" alt="whatsapp"> </div>
+            <div> <img data-sharer="facebook" data-picture="img/bell.svg" class="share-icon" src="img/facebook.svg" alt="facebook"> </div>
+            <div> <img class="share-icon" src="img/twitter.svg" alt="twitter"> </div>
+            <div> <img class="share-icon" src="img/instagram.svg" alt="twitter"> </div>
+        </div>
+
     </div>
 </body>
 
