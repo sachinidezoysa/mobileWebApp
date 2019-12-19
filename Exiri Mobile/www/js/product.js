@@ -18,7 +18,7 @@ var arrProducts = [{
         image: ['img/products/electronics/2/img1.jpg', 'img/products/electronics/2/img2.jpg', 'img/products/electronics/2/img3.jpg'],
         price: 10000.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
         rank: 4,
         reviews: []
     },
@@ -162,7 +162,7 @@ var arrProducts = [{
         image: ['img/products/mens_wear/14/img1.jpg', 'img/products/mens_wear/14/img2.jpg'],
         price: 150.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
         rank: 4,
         reviews: []
     },
@@ -186,7 +186,7 @@ var arrProducts = [{
         image: ['img/products/mens_wear/16/img1.jpg'],
         price: 250.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
         rank: 4,
         reviews: []
     },
@@ -246,7 +246,7 @@ var arrProducts = [{
         image: ['img/products/mobile/21/img1.jpg', 'img/products/mobile/21/img2.jpg', 'img/products/mobile/21/img3.jpg'],
         price: 75.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
         rank: 4,
         reviews: []
     },
@@ -330,7 +330,7 @@ var arrProducts = [{
         image: ['img/products/grocery/28/img1.jpg'],
         price: 200.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
         rank: 4,
         reviews: []
     },
@@ -342,7 +342,7 @@ var arrProducts = [{
         image: ['img/products/grocery/29/img1.png'],
         price: 145.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
         rank: 4,
         reviews: []
     },
@@ -354,7 +354,7 @@ var arrProducts = [{
         image: ['img/products/grocery/30/img1.jpg'],
         price: 300.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
         rank: 4,
         reviews: []
     },
@@ -366,7 +366,7 @@ var arrProducts = [{
         image: ['img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png'],
         price: 178.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
         rank: 4,
         reviews: []
     },
@@ -378,7 +378,7 @@ var arrProducts = [{
         image: ['img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png'],
         price: 178.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
         rank: 4,
         reviews: []
     },
@@ -390,7 +390,7 @@ var arrProducts = [{
         image: ['img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png'],
         price: 178.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
         rank: 4,
         reviews: []
     },
@@ -402,7 +402,19 @@ var arrProducts = [{
         image: ['img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png'],
         price: 178.00,
         discount: 0,
-        isFavourite: true,
+        isFavourite: false,
+        rank: 4,
+        reviews: []
+    },
+    {
+        id: 1,
+        name: 'Bulb',
+        decription: ['Model Number:	M1908C3JG', 'Processor:	Octa Core', 'RAM: 4 GB', 'Model:	Redmi Note 8', 'Operating System: Android', 'Condition:	New'],
+        category: 'Electronics',
+        image: ['img/bell.svg'],
+        price: 190.00,
+        discount: 0,
+        isFavourite: false,
         rank: 4,
         reviews: []
     }
@@ -410,7 +422,7 @@ var arrProducts = [{
 
 var categories = {
     electronics: [
-        { name: 'TV', stock: 20, img: 'img/bell.svg' },
+        { name: 'All in electronics', stock: 200, img: 'img/bell.svg' },
         { name: 'TV', stock: 20, img: 'img/bell.svg' },
         { name: 'TV', stock: 20, img: 'img/bell.svg' },
         { name: 'TV', stock: 20, img: 'img/bell.svg' },
@@ -420,6 +432,7 @@ var categories = {
         { name: 'TV', stock: 20, img: 'img/bell.svg' }
     ],
     health: [
+        { name: 'All in health & beauty', stock: 2151, img: 'img/bell.svg' },
         { name: 'Panadol', stock: 2151, img: 'img/bell.svg' },
         { name: 'Panadol', stock: 2151, img: 'img/bell.svg' }
     ]
@@ -453,8 +466,6 @@ $(document).ready(function() {
     }, 1500);
 
     // CAMERA PROPERTIES
-    // var canvas = document.getElementById('canvas');
-    // var context = canvas.getContext('2d');
     var video = document.getElementById('video');
 
     // PROMOTION SLIDER IMAGES
@@ -473,6 +484,15 @@ $(document).ready(function() {
         //     el.removeClass("scroll-enable");
         // }
     });
+
+    // SEARCH FILTER
+    $("#search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#general-product-table tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+
 
     // IMAGE SLIDESHOW HANDLER
     $(function() {
@@ -505,22 +525,45 @@ $(document).ready(function() {
         window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/delivery-info.html';
     });
 
+    $('#btn-db').click(() => {
+        window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/dashboard.html';
+    });
+
     // OPEN CAMERA
     $('#btn-camera').click(event => {
-        $('#video').css('display', 'inline-block');
-        $('.camera-close').css('display', 'unset');
-        // Grab elements, create settings, etc.
-        var video = document.getElementById('video');
-
-        // Get access to the camera!
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            // Not adding `{ audio: true }` since we only want video now
-            navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-                //video.src = window.URL.createObjectURL(stream);
-                video.srcObject = stream;
-                video.play();
-            });
+        window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+        let finalTranscript = '';
+        let recognition = new window.SpeechRecognition();
+        recognition.interimResults = true;
+        recognition.maxAlternatives = 10;
+        recognition.continuous = true;
+        recognition.onresult = (event) => {
+            let interimTranscript = '';
+            for (let i = event.resultIndex, len = event.results.length; i < len; i++) {
+                let transcript = event.results[i][0].transcript;
+                if (event.results[i].isFinal) {
+                    finalTranscript += transcript;
+                } else {
+                    interimTranscript += transcript;
+                }
+            }
+            document.querySelector('body').innerHTML = finalTranscript + '<i style="color:#ddd;">' + interimTranscript + '</>';
         }
+        recognition.start();
+        // $('#video').css('display', 'inline-block');
+        // $('.camera-close').css('display', 'unset');
+        // // Grab elements, create settings, etc.
+        // var video = document.getElementById('video');
+
+        // // Get access to the camera!
+        // if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        //     // Not adding `{ audio: true }` since we only want video now
+        //     navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        //         //video.src = window.URL.createObjectURL(stream);
+        //         video.srcObject = stream;
+        //         video.play();
+        //     });
+        // }
     });
 
     // CLOSE CAMERA
@@ -552,13 +595,17 @@ $(document).ready(function() {
             case 'health & beauty':
                 setCategoryData(categories.health);
                 break;
+            case 'clear filter':
+                window.location.reload();
+                break;
         }
     });
 
     function setCategoryData(param) {
         var div = document.getElementById('modalbody');
+        div.innerHTML = "";
         for (var x = 0; x < param.length; x++) {
-            var textnode = "<div class='sub-cat horizontal'>" +
+            var textnode = "<div id='cat' class='sub-cat horizontal'>" +
                 "<img src='" + param[x].img + "'>" +
                 "<span style='flex:1;' class='vertical'>" + param[x].name + "</span>" +
                 "<strong class='vertical'> (" + param[x].stock + ") </strong>" +
@@ -567,15 +614,57 @@ $(document).ready(function() {
         }
     }
 
+    // SUB-CATEGORY CLICK
+    $('#modalbody').click(event => {
+        switch (event.currentTarget.children[0].children[1].innerText.toLowerCase()) {
+            case 'all in electronics':
+                categorizeProducts('electronics');
+                break;
+            case 'all in health & beauty':
+                categorizeProducts('health & beauty');
+                break;
+        }
+    });
+
+    function categorizeProducts(param) {
+        // $('#general-product-table').innerHTML = "<tr></tr>";
+        // $("#general-product-table").empty();
+        $("#general-product-table").find("tr:gt(0)").remove();
+        arrProducts.forEach((item, key) => {
+            if (item.category.toLowerCase() !== param) {
+                return;
+            }
+            let genNode =
+                "<tr class='seperate'><td class='gen-td'>" +
+                "<div class='gen-item-card item-card vertical'>" +
+                "<div class='card-content-1'>" +
+                "<span class='add-to-fav' id='" + (key + 1) + "'>" + (item.isFavourite ? "<i class='fa fa-heart' aria-hidden='true'> </i>" : "<i class='fa fa-heart-o' aria-hidden='true'> </i>") + "</span>" +
+                "<span> <i class='fa fa-share-alt' aria-hidden='true'></i> </span>" +
+                "</div>" +
+                "<div class='card-content-2 vertical'>" +
+                "<img src=" + item.image[0] + ">" +
+                "</div>" +
+                "<div class='card-content-3 vertical'>" +
+                "<span>" + item.name + "</span>" +
+                "<span> <strong> Rs." + item.price + "</strong> </span>" +
+                "</div>" +
+                "</div>" +
+                "</td></tr>";
+            $('#general-product-table tr:last').after(genNode);
+        });
+        $("#clear-filter").css('display', 'flex');
+        $("#close-mod").click();
+    }
+
     // INITIAL ITEM CATEGORIZE AND INSERTION
     arrProducts.forEach((item, key) => {
         if (item.isFavourite) {
             let favNode =
-                "<tr><td>" +
+                "<tr><td class='fav-td' id='" + item.id + "'>" +
                 "<div class='item-card favourite vertical'>" +
                 "<div class='card-content-1'>" +
                 "<span> <i class='fa fa-heart' aria-hidden='true'></i> </span>" +
-                "<span> <i class='fa fa-share-alt' aria-hidden='true'></i> </span>" +
+                "<span id='share-btn'> <i class='fa fa-share-alt' aria-hidden='true'></i> </span>" +
                 "</div>" +
                 "<div class='card-content-2 vertical'>" +
                 "<img src=" + item.image[0] + ">" +
@@ -589,11 +678,11 @@ $(document).ready(function() {
             $('#fav-product-table tr:last').after(favNode);
         }
         let genNode =
-            "<tr class='seperate'><td class='gen-td'>" +
+            "<tr class='seperate'><td class='gen-td' id='" + item.id + "'>" +
             "<div class='gen-item-card item-card vertical'>" +
             "<div class='card-content-1'>" +
             "<span class='add-to-fav' id='" + (key + 1) + "'>" + (item.isFavourite ? "<i class='fa fa-heart' aria-hidden='true'> </i>" : "<i class='fa fa-heart-o' aria-hidden='true'> </i>") + "</span>" +
-            "<span> <i class='fa fa-share-alt' aria-hidden='true'></i> </span>" +
+            "<span id='share-btn'> <i class='fa fa-share-alt' aria-hidden='true'></i> </span>" +
             "</div>" +
             "<div class='card-content-2 vertical'>" +
             "<img src=" + item.image[0] + ">" +
@@ -614,12 +703,13 @@ $(document).ready(function() {
             toastr.warning("Already Exists in Favourites!");
             return;
         }
+        $("#info").css('display', 'none');
         let favNode =
             "<tr><td>" +
             "<div class='item-card favourite vertical'>" +
             "<div class='card-content-1'>" +
             "<span> <i class='fa fa-heart' aria-hidden='true'></i> </span>" +
-            "<span> <i class='fa fa-share-alt' aria-hidden='true'></i> </span>" +
+            "<span id='share-btn'> <i class='fa fa-share-alt' aria-hidden='true'></i> </span>" +
             "</div>" +
             "<div class='card-content-2 vertical'>" +
             "<img src=" + item.image[0] + ">" +
@@ -637,9 +727,22 @@ $(document).ready(function() {
     });
 
 
+    $('#hide-share-wrapper').click(() => {
+        $(".share-wrapper").css('transform', 'translateY(36vw)');
+    });
 
+    $(document).ready(function() {
+        // SHARE VIEW
+        $("#share-btn").click(() => {
+            $(".share-wrapper").css('transform', 'translateY(0)');
+        });
+    });
 
+    $(".card-content-2").click((ev) => {
+        window.sessionStorage.setItem("selectedProduct", JSON.stringify(arrProducts[ev.currentTarget.parentNode.parentNode.id - 1]));
+    });
 
-
-
+    // $(".fav-td").click((ev) => {
+    //     window.sessionStorage.setItem("selectedProduct", JSON.stringify(arrProducts[ev.currentTarget.parentNode.parentNode.id - 1]));
+    // });
 });

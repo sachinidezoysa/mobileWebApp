@@ -29,10 +29,6 @@
     cursor: pointer;
 }
 
-.content>.back {
-    justify-content: unset !important;
-}
-
 .content>.back>span>b {
     font-size: 5vw;
     color: orangered;

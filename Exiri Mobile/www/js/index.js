@@ -1,3 +1,13 @@
+$(document).ready(function() {
+    $("#btn-login").click(function(evt) {
+        window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/product.html';
+    });
+    $("#btnViewCart").click(function() {
+        var t = x;
+        alert('PRODUCT Clicked and Listened in Index.js');
+    });
+});
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -17,13 +27,13 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        window.location.href = window.location.href + 'login.html';
+        // window.location.href = window.location.href + 'login.html';
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-            var parentElement = document.getElementById(id);
+            // var parentElement = document.getElementById(id);
 
-            console.log('Received Event: ' + id);
+            // console.log('Received Event: ' + id);
         }
         // 
 }
