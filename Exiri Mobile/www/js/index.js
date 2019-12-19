@@ -17,7 +17,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        window.location.href = window.location.href + 'product.html';
+        window.location.href = window.location.href + 'about.html';
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
