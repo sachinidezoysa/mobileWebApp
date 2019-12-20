@@ -25,4 +25,9 @@ $(document).ready(function() {
         toastr.success('Products loaded successfully...');
     });
 
+    $('#btn-edit-user').click(() => {
+        window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/editProfile.html';
+    });
+
 });
+
