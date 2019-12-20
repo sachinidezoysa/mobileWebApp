@@ -6,6 +6,10 @@ $(document).ready(function() {
         var t = x;
         alert('PRODUCT Clicked and Listened in Index.js');
     });
+
+    $('#pg-signup').click(() => {
+        window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/signup.html';
+    });
 });
 
 var app = {
