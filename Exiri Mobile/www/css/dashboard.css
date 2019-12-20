@@ -1,3 +1,13 @@
+@media only screen and (min-width: 1000px) and (min-height: 750px) {
+    .show-for-L {
+        visibility: visible !important;
+        /* height: max-content !important; */
+        /* width: max-content !important; */
+        position: relative !important;
+        left: 0 !important;
+    }
+}
+
 .page {
     display: flex;
     flex-direction: column;
@@ -51,8 +61,9 @@ body {
 }
 
 .page>.A>.purchase-wishlist {
-    height: 24vh;
+    height: 19vh;
     background-color: black;
+    color: whitesmoke;
 }
 
 .page>.A>.purchase-wishlist>.purchase {
@@ -103,7 +114,46 @@ body {
     border-radius: 43px;
     color: thistle;
     margin: 11px;
+    padding: 10px;
 }
+
+.page>.B>.members>div {
+    justify-content: flex-start !important;
+}
+
+.page>.B>.members>div>div {
+    width: 100%;
+}
+
+.page>.B>.members>div>img {
+    margin: 10px !important;
+    border-radius: 50% !important;
+    height: 6vh;
+    width: 6vh;
+}
+
+.progress-bar {
+    height: 20px;
+    border-radius: 21px;
+    background-color: darkgrey;
+    display: flex;
+    overflow: hidden;
+}
+
+.progress-bar>span {
+    height: 100%;
+    transition: 0.9s;
+    width: 0;
+    background-color: #38ab58;
+}
+
+
+/* .show-for-L {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+} */
 
 
 /* FOOTER */

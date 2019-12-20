@@ -8,11 +8,13 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
     <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/progress/jquery.lineProgressbar.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Javascripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/dashboard.js"></script>
+    <!-- <script type="text/javascript" src="js/progress/jquery.lineProgressbar.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
     <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
@@ -24,7 +26,7 @@
     <div class="page vertical">
         <div class="A">
             <div class="slide">
-                <div id="slider" class="promo-slider horizontal" style="background-image: url('img/offer1.jpg') ;height: 13vh;margin: 7px;">
+                <div id="slider" class="promo-slider horizontal" style="background-image: url('img/offer1.jpg') ;height: 13vh;margin: 14px;">
                     <span class="column-1 vertical"> 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                 </span>
@@ -38,10 +40,12 @@
             </div>
             <div class="purchase-wishlist horizontal">
                 <div class="purchase">
-
+                    <h1 style="text-align: center;"><strong>$125</strong></h1>
+                    <h4 style="text-align: center;">Total purchase</h4>
                 </div>
                 <div class="wishlist">
-
+                    <h1 style="text-align: center;"><strong>157</strong></h1>
+                    <h4 style="text-align: center;">Total wishlist</h4>
                 </div>
             </div>
             <div class="cirlce">
@@ -53,14 +57,40 @@
             </div>
         </div>
         <div class="B">
-            <div class="cirlce">
-                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+            <div class="cirlce show-for-L">
+                <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
             </div>
-            <div class="members" style="font-size: larger">
-                <ul>shifan</ul>
-                <ul>sachini</ul>
-                <ul>Mushtharq</ul>
-                <ul>banu</ul>
+            <div class="members">
+
+                <!-- <div class="horizontal">
+                    <img src='img/user1.jpg'>
+                    <div class="vertical">
+                        <a>Hendrix</a>
+                        <div class="progress-bar"> <span id="shifan"> </span> </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="horizontal">
+                    <img src="img/user2.jpg">
+                    <div class="vertical">
+                        <a>sachini</a>
+                        <div class="progress-bar"> <span id="sachini"> </span> </div>
+                    </div>
+                </div>
+                <div class="horizontal">
+                    <img src="img/user3.jpg">
+                    <div class="vertical">
+                        <a>banu</a>
+                        <div class="progress-bar"> <span id="banu"> </span> </div>
+                    </div>
+                </div>
+                <div class="horizontal">
+                    <img src="img/user4.jpg">
+                    <div class="vertical">
+                        <a>mushtharq</a>
+                        <div class="progress-bar"> <span id="mushtharq"> </span> </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>

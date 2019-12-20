@@ -1,3 +1,33 @@
+/* ipad landscape */
+
+@media only screen and (min-width: 1000px) and (min-height: 750px) {
+    .content-body-vertical {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        
+    }
+    .container-contact100 {
+        display: flex;
+    }
+}
+
+
+/* iPad Potrait */
+
+@media only screen and (min-width: 740px) and (min-height: 480px) {}
+
+
+/* ----------------------------------------------------------------- */
+
+
+/* iPhone Landscape */
+
+@media only screen and (max-width: 900px) and (max-height: 500px) {}
+
+
+
+
+
 @media only screen and (min-width: 400px) {}
 
 .page {
@@ -51,11 +81,12 @@
 .content>.content-body>div {
     flex: 1;
     margin: 2vh;
-    box-shadow: 0 0 2px 0px black;
+    box-shadow: none;
+    text-align: left;
     border-radius: 3px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:#75816b;
-    font-size: 10;
+    font-size: 5;
 }
 
 
