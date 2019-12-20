@@ -24,6 +24,14 @@
     background: transparent;
 }
 
+.color-tit {
+    color: #ff4903;
+}
+
+.light-title {
+    color: darkgray;
+}
+
 .nav-back {
     font-size: 4.5vh !important;
     font-size: 4vh !important;
@@ -68,6 +76,18 @@
     display: block !important;
     width: 22px !important;
     height: 22px !important;
+}
+
+.info-msg {
+    background-color: #d1ffce;
+    width: 80%;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 6px;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 6px;
+    margin-top: 8px;
 }
 
 .lds-roller {

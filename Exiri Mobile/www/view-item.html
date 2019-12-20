@@ -8,31 +8,27 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/product.css" />
+    <link rel="stylesheet" type="text/css" href="css/view-item.css" />
     <link rel="stylesheet" type="text/css" href="css/common.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <!-- Javascripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/product.js"></script>
+    <script type="text/javascript" src="js/view-item.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="js/share/sharer.min.js"></script>
+    <script type="text/javascript" src="js/zoom/jquery.zoom.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <title> Exiri Products </title>
 </head>
 
 <body>
-    <div id="ex1" class="modal">
-        <span class="mod-title"> Select sub-category </span>
-        <a id="close-mod" href="#" rel="modal:close">Close</a>
-        <div id="modalbody" class="modalbody vertical">
-
-        </div>
-    </div>
 
     <div class="page">
 
@@ -44,24 +40,68 @@
             </span>
         </div>
 
+        <!-- CONTENT BODY -->
+        <div class="content vertical">
+            <!-- SECTION 01-->
+            <div class="sec-1 vertical">
+
+                <div class="section-1-A vertical">
+                </div>
+
+                <div class="section-1-B vertical">
+                    <!-- TAB CONTENT 01 -->
+                    <div class="tabs fnt-1 horizontal">
+                        <span class="tab" id="tab-1"> Options </span>
+                        <span class="tab" id="tab-2"> Details </span id="tab-1">
+                        <span class="tab" id="tab-3"> Reviews </span id="tab-1">
+                    </div>
+
+                    <div class="tab-content">
+                    </div>
+
+        <!-- BUTTON WRAPPER -->
+        <div class="button-wrapper">
+            <div class="btn-exiri-primary horizontal">
+                Add to cart
+                <span> <li class="fa fa-angle-right" aria-hidden="true"></li> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-        <!-- FOOTER -->
-        <div class="footer">
-            <div>
-                <span>
+
+        <!-- SECTION 02 -->
+        <div class="section-2">
+            <div class="view-wrapper">
+                <span class="titl"> Details </span>
+                <div id="view-2" class="tab-content">
+                </div>
+            </div>
+            <div class="view-wrapper">
+                <span class="titl"> Reviews </span>
+                <div id="view-3" class="tab-content">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div>
+            <span>
                     <img src="img/home.svg">
                     </span>
-                <span>
+            <span>
                     <div class="cart">
                         <img id="btnViewCart" src="img/shopping-cart.svg">
                     </div>
                     </span>
-                <span>
+            <span>
                     <img id="btn-db" src="img/dashboard.svg">
                 </span>
-            </div>
         </div>
+    </div>
 
     </div>
 </body>
