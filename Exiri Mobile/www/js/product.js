@@ -571,6 +571,9 @@ $(document).ready(function() {
     $('#btn-db').click(() => {
         window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/dashboard.html';
     });
+    $('#btn-edit-user').click(() => {
+        window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/editProfile.html';
+    });
 
     // OPEN CAMERA
     $('.btn-mic').click(event => {

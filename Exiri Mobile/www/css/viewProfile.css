@@ -1,39 +1,45 @@
 .page {
     display: flex;
     flex-direction: column;
-    height: calc(106vh - 60px);
+    height: calc(108vh - 60px);
 }
 
-.logo {
+.logo{
     width: 10vh;
     height: auto;
+    
 }
 
-.header {
-    display: flex;
-    height: auto;
+.header{
+    display:flex;
+    height:auto;
+    margin: 4px 4px 0px 4px;
 }
 
-.header>span {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-}
-
-.content {
-    height: 100%;
+.header>span{
+    display:flex;
+    flex:1;
+    justify-content:flex-end;
 }
 
 .notification,
-.profile {
-    width: 3.5vh;
+.profile{
+    width:3.5vh;
     height: auto;
     margin: 0 3px;
     cursor: pointer;
 }
 
+.content{
+    flex: 1;
+}
+
+.content>.back {
+    justify-content: unset !important;
+}
+
 .content>.back>span>b {
-    font-size: 3vh;
+    font-size: 5vw;
     color: orangered;
 }
 
@@ -42,69 +48,60 @@
     justify-content: flex-start;
 }
 
-.vertical {
-    display: flex;
+.vertical{
+    display:flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.main-container {
+.main-container{
     height: 100%;
+   
 }
 
-.main-container>.cont-1 {
+.main-container > .cont-1{
     flex: 0 20%;
 }
 
-.main-container>.cont-1>img {
+.main-container > .cont-1>img{
     margin: 0 auto;
     width: 10vh;
 }
 
-.main-container>.cont-2 {
+.main-container > .cont-2{
     flex: 0 80%;
 }
 
-.main-container>.cont-2 {
+.main-container > .cont-2{
     justify-content: flex-start;
 }
 
-.main-container>.cont-2>div {
+.main-container > .cont-2>div{
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
 }
 
-.main-container>.cont-2>div>span {
+.main-container > .cont-2>div>span{
     padding: 5px 0;
     font-weight: bold;
 }
 
-.main-container>.cont-2>div>input {
+.main-container > .cont-2>div>input{
     margin-bottom: 2vh;
 }
 
-.main-container>.cont-2>.btn-cont {
+.main-container > .cont-2>.btn-cont{
     align-items: flex-end;
 }
 
-.signupBtn {
-    background-color: #FF3D00;
+.final-title{
+    color: orangered;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: none;
-    color: white;
-    padding: 12px;
-    width: 45%;
-    border-radius: 6px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    margin: 4px 2px;
 }
 
-.footer {
+ .footer {
     display: flex;
     height: 5vh;
     background: #0F0F74;
@@ -137,3 +134,6 @@
     width: 3.5vh;
     cursor: pointer;
 }
+
+ 
+

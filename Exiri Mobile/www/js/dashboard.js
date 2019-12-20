@@ -102,23 +102,36 @@ $(document).ready(function() {
 
     ];
 
+    sortUsers();
+    generateLeaderboard();
+
+    function sortUsers() {
+
+
+    }
 
     // CREATING LEADERBOARD
-    var mem = $('.members');
-    users.forEach((item) => {
-        var leader =
-            "<div class='horizontal'>" +
-            "<img src='" + item.profileImage + "'>" +
-            "<div class='vertical'>" +
-            "<a>" + item.name + "</a>" +
-            // "<div style='width:50%' class='progress-bar'> <span id=" + item.name + "> </span> </div>" +
-            "<div class='progress-bar'> <span style='width:" + (100 / item.purchases.length) * users.length + "%' id=" + item.name + "> </span> </div>" +
-            // "<div class='progress-bar'> <span style='width:80%' id=" + item.name + "> </span> </div>" +
-            "</div> </div>";
-        mem[0].innerHTML += leader;
+    function generateLeaderboard() {
+        var mem = $('.members');
+        users.forEach((item) => {
+            var leader =
+                "<div class='horizontal'>" +
+                "<img src='" + item.profileImage + "'>" +
+                "<div class='vertical'>" +
+                "<a class='leader-name'>" + item.name + "</a>" +
+                // "<div style='width:50%' class='progress-bar'> <span id=" + item.name + "> </span> </div>" +
+                "<div class='progress-bar'> <span style='width:" + (100 / item.purchases.length) * users.length + "%' id=" + item.name + "> </span> </div>" +
+                // "<div class='progress-bar'> <span style='width:80%' id=" + item.name + "> </span> </div>" +
+                "</div> </div>";
+            mem[0].innerHTML += leader;
+        });
+    }
+
+    $(window).on("orientationchange", function(event) {
+        if (event.currentTarget.screen.width > 1000 && event.currentTarget.screen.height > 700) {
+            loadDashboard(true);
+        }
     });
-
-
 
 
 
@@ -136,63 +149,72 @@ $(document).ready(function() {
     // $("#banu").css('width', (((100 / leaderBoard.banu) * Object.keys(leaderBoard).length) + "%"));
     // $("#mushtharq").css('width', (((100 / leaderBoard.mushtharq) * Object.keys(leaderBoard).length) + "%"));
 
-    var options = {
-        animationEnabled: true,
-        theme: "dark1",
-        backgroundColor: "#291e40",
-        data: [{
-            type: "doughnut",
-            innerRadius: "83%",
-            showInLegend: false,
-            legendText: "{label}",
-            indexLabel: "#percent%",
-            dataPoints: [
-                { label: "Department Stores", y: 6492917 },
-                { label: "Discount Stores", y: 7380554 },
-                { label: "Stores for Men / Women", y: 1610846 },
-                { label: "Teenage Specialty Stores", y: 950875 },
-                { label: "All other outlets", y: 900000 }
-            ]
-        }]
-    };
-    $("#chartContainer").CanvasJSChart(options);
-    $("#chartContainer2").CanvasJSChart(options);
-    $(".show-for-L").css('visibility', 'hidden');
-    // $(".show-for-L").css('height', 'max-content');
-    $(".show-for-L").css('position', 'absolute');
-    $(".show-for-L").css('left', '5000vh');
+    loadDashboard(false);
+
+    function loadDashboard(landscapeMode) {
+        var options = {
+            animationEnabled: true,
+            theme: "dark1",
+            backgroundColor: "#291e40",
+            data: [{
+                type: "doughnut",
+                innerRadius: "83%",
+                showInLegend: false,
+                legendText: "{label}",
+                indexLabel: "#percent%",
+                dataPoints: [
+                    { label: "Department Stores", y: 6492917 },
+                    { label: "Discount Stores", y: 7380554 },
+                    { label: "Stores for Men / Women", y: 1610846 },
+                    { label: "Teenage Specialty Stores", y: 950875 },
+                    { label: "All other outlets", y: 900000 }
+                ]
+            }]
+        };
+        $("#chartContainer").CanvasJSChart(options);
+        $("#chartContainer2").CanvasJSChart(options);
+        if (!landscapeMode) {
+            // $('#chartContainer').css('display', 'unset');
+            $(".show-for-L").css('visibility', 'hidden');
+            // $(".show-for-L").css('height', 'max-content');
+            $(".show-for-L").css('position', 'absolute');
+            $(".show-for-L").css('left', '5000vh');
+        } else {
+            $('#chartContainer').css('display', 'none');
+            // L true
+        }
 
 
-    var options = {
-        animationEnabled: true,
-        dataPointWidth: 12,
-        backgroundColor: "black",
-        theme: "dark2",
-        axisX: {
-            title: "axisX Title",
-            gridThickness: 0
-        },
-        axisY: {
-            title: "axisX Title",
-            gridThickness: 0
-        },
-        colorSet: "customColorSet1",
-        data: [{
-            // Change type to "doughnut", "line", "splineArea", etc.
-            type: "column",
-            dataPoints: [
-                { label: "apple", y: 10 },
-                { label: "orange", y: 15 },
-                { label: "banana", y: 25 },
-                { label: "mango", y: 30 },
-                { label: "grape", y: 28 }
-            ]
-        }]
-    };
+        var options = {
+            animationEnabled: true,
+            dataPointWidth: 12,
+            backgroundColor: "black",
+            theme: "dark2",
+            axisX: {
+                title: "axisX Title",
+                gridThickness: 0
+            },
+            axisY: {
+                title: "axisX Title",
+                gridThickness: 0
+            },
+            colorSet: "customColorSet1",
+            data: [{
+                // Change type to "doughnut", "line", "splineArea", etc.
+                type: "column",
+                dataPoints: [
+                    { label: "apple", y: 10 },
+                    { label: "orange", y: 15 },
+                    { label: "banana", y: 25 },
+                    { label: "mango", y: 30 },
+                    { label: "grape", y: 28 }
+                ]
+            }]
+        };
 
-    CanvasJS.addColorSet('customColorSet1', ['#291e40']);
-    $("#barChartContainer").CanvasJSChart(options);
-
+        CanvasJS.addColorSet('customColorSet1', ['#291e40']);
+        $("#barChartContainer").CanvasJSChart(options);
+    }
     // IMAGE SLIDESHOW HANDLER
     $(function() {
         var i = 0;
