@@ -15,6 +15,12 @@
     margin: 4px 2px;
   }
 
+  #pg-signup{
+    color: red;
+    cursor: pointer;
+    user-select: none;
+  }
+
   .button1 {border-radius: 25%;} 
 
   .container label{
