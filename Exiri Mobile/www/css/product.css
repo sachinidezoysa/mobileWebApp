@@ -27,11 +27,20 @@
         top: 1px;
         font-size: 2.5vh;
     }
+    .content>.search-and-promo>span>.btn-mic {
+        font-size: 2.5vh;
+    }
     .content>.search-and-promo>.promo-slider {
         height: 22vw;
     }
     .footer {
         margin-bottom: 3vw !important;
+    }
+    .info-msg {
+        font-size: 20px !important;
+    }
+    .item-card>.card-content-3 {
+        font-size: 19px !important;
     }
 }
 
@@ -62,6 +71,12 @@
     .camera {
         position: absolute;
         right: 4vh;
+        top: 2.5vh;
+        font-size: 3vh;
+    }
+    .btn-mic {
+        position: absolute;
+        right: 7vh;
         top: 2.5vh;
         font-size: 3vh;
     }
@@ -173,6 +188,12 @@
         width: 100% !important;
         top: 0 !important;
     }
+    .info-msg {
+        font-size: 20px !important;
+    }
+    .item-card>.card-content-3 {
+        font-size: 19px !important;
+    }
 }
 
 
@@ -260,6 +281,10 @@
 
 
 /* ------------------------------------------------------------------- */
+
+body {
+    overflow: hidden;
+}
 
 .page {
     display: flex;
@@ -469,6 +494,12 @@ input:focus {
     top: 5px;
 }
 
+.btn-mic {
+    position: absolute;
+    right: 11%;
+    top: 5px;
+}
+
 
 /* .content>.search-and-promo>span>input {
     margin: 0 auto;
@@ -571,12 +602,12 @@ input:focus {
 }
 
 .content>.categories-options>.categories>.category {
-    background: #5a4b5a;
+    background: #0d0270;
     margin: 3px 5px;
     min-width: 25vw;
     min-height: 8vw;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 8px;
     color: #dedede;
     padding: 4px;
     display: flex;

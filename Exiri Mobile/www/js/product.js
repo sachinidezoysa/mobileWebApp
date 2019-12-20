@@ -1,422 +1,465 @@
 var arrProducts = [{
         id: 1,
         name: 'Redmi Note 8',
-        decription: ['Model Number:	M1908C3JG', 'Processor:	Octa Core', 'RAM: 4 GB', 'Model:	Redmi Note 8', 'Operating System: Android', 'Condition:	New'],
+        description: ['Model Number:	M1908C3JG', 'Processor:	Octa Core', 'RAM: 4 GB', 'Model:	Redmi Note 8', 'Operating System: Android', 'Condition:	New'],
         category: 'Electronics',
         image: ['img/products/electronics/1/img1.jpg', 'img/products/electronics/1/img2.jpg', 'img/products/electronics/1/img3.jpg'],
         price: 190.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     },
     {
         id: 2,
         name: 'Smart Roku-TV',
-        decription: ['Display Technology:	LED', 'Brand: Toshiba', 'RAM: 4 GB', 'Model:	Toshiba 43In TV', 'Screen Size:	43 inches', 'MPN:	Does Not Apply', 'Condition:	New'],
+        description: ['Display Technology:	LED', 'Brand: Toshiba', 'RAM: 4 GB', 'Model:	Toshiba 43In TV', 'Screen Size:	43 inches', 'MPN:	Does Not Apply', 'Condition:	New'],
         category: 'Electronics',
         image: ['img/products/electronics/2/img1.jpg', 'img/products/electronics/2/img2.jpg', 'img/products/electronics/2/img3.jpg'],
         price: 10000.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [{
+                name: 'Shifan',
+                comment: 'Good Product!',
+                rating: 4,
+                image: 'img/user.svg',
+                date: '10/02/2019'
+            },
+            {
+                name: 'Mushtharq Hajiyar',
+                comment: 'Sexy Product!',
+                rating: 5,
+                image: 'img/user.svg',
+                date: '15/02/2019'
+            },
+            {
+                name: 'Banusundar',
+                comment: 'Very Bad! I dont like this',
+                rating: 0,
+                image: 'img/user.svg',
+                date: '28/02/2019'
+            },
+            {
+                name: 'Theja',
+                comment: 'Good Product!',
+                rating: 2,
+                image: 'img/user.svg',
+                date: '10/02/2019'
+            },
+            {
+                name: 'Sachini',
+                comment: 'Sexy Product!',
+                rating: 3,
+                image: 'img/user.svg',
+                date: '15/02/2019'
+            },
+            {
+                name: 'Thejade Maapule',
+                comment: 'Very Bad! I dont like this',
+                rating: 5,
+                image: 'img/user.svg',
+                date: '28/02/2019'
+            }
+        ],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     },
     {
         id: 3,
         name: 'JOVEES-AyuCream',
-        decription: ['Type:	Day Cream', 'Gender: Unisex', 'Concerns: Wrinkle Reduction', 'Country/Region of Manufacture:	India', 'Formulation:	Cream', 'Brand:	JOVEES', 'Size Type: Sample Size'],
+        description: ['Type:	Day Cream', 'Gender: Unisex', 'Concerns: Wrinkle Reduction', 'Country/Region of Manufacture:	India', 'Formulation:	Cream', 'Brand:	JOVEES', 'Size Type: Sample Size'],
         category: 'Health & Beauty',
         image: ['img/products/health_beauty/3/img1.jpg'],
         price: 60.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     },
     {
         id: 4,
         name: 'Vaseline-Body Lotion',
-        decription: ['Type: Body Lotion', 'Gender: Unisex', 'Concerns: SPF', 'Country/Region of Manufacture:	India', 'Formulation: Lotion', 'Brand: Vaseline', 'Size Type: Medium'],
+        description: ['Type: Body Lotion', 'Gender: Unisex', 'Concerns: SPF', 'Country/Region of Manufacture:	India', 'Formulation: Lotion', 'Brand: Vaseline', 'Size Type: Medium'],
         category: 'Health & Beauty',
         image: ['img/products/health_beauty/4/img1.jpg', 'img/products/health_beauty/4/img2.jpg', 'img/products/health_beauty/4/img3.jpg'],
         price: 85.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     },
     {
         id: 5,
         name: 'Ladies Choli',
-        decription: ['Material:Acetate', 'Gender: Female', 'Style: A-Line', 'MPN: 3MU2GY1MB6GG4MA1', 'Colour: Beige'],
+        description: ['Material:Acetate', 'Gender: Female', 'Style: A-Line', 'MPN: 3MU2GY1MB6GG4MA1', 'Colour: Beige'],
         category: 'Ladies Wear',
         image: ['img/products/clothing/5/img1.jpg', 'img/products/clothing/5/img2.jpg'],
         price: 105.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 6,
         name: 'Air Max Shoe',
-        decription: ['Material:Paraform', 'Gender: Unisex', 'Style: Sport', 'MPN: 3MU2GY1101010', 'Condition:New'],
+        description: ['Material:Paraform', 'Gender: Unisex', 'Style: Sport', 'MPN: 3MU2GY1101010', 'Condition:New'],
         category: 'Fashion & Trend',
         image: ['img/products/clothing/6/img1.jpg', 'img/products/clothing/6/img2.jpg', 'img/products/clothing/6/img3.jpg'],
         price: 120.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 7,
         name: 'Adidas shirt',
-        decription: ['Material:Silk', 'Gender: Men', 'Style: Casual', 'MPN: 3BUPP2GY1101010', 'Condition:New'],
+        description: ['Material:Silk', 'Gender: Men', 'Style: Casual', 'MPN: 3BUPP2GY1101010', 'Condition:New'],
         category: 'Mens Wear',
         image: ['img/products/clothing/7/img1.jpg', 'img/products/clothing/7/img2.jpg', 'img/products/clothing/7/img3.jpg'],
         price: 95.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 8,
         name: 'Baby Party-Dress',
-        decription: ['Material:Silk', 'Style: Party', 'MPN: 3BUPP2GY11012210', 'Size: M-L-XL', 'Condition:New'],
+        description: ['Material:Silk', 'Style: Party', 'MPN: 3BUPP2GY11012210', 'Size: M-L-XL', 'Condition:New'],
         category: 'Fashion & Trend',
         image: ['img/products/clothing/8/img1.jpg', 'img/products/clothing/8/img2.jpg'],
         price: 79.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 9,
         name: 'White Saree',
-        decription: ['Material: Cotton', 'Style: Festival', 'Gender: Woman', 'MPN: 3BUPP2GY11012210', 'Size: M-L-XL', 'Condition:New'],
+        description: ['Material: Cotton', 'Style: Festival', 'Gender: Woman', 'MPN: 3BUPP2GY11012210', 'Size: M-L-XL', 'Condition:New'],
         category: 'Ladies Wear',
         image: ['img/products/clothing/9/img1.jpg', 'img/products/clothing/9/img2.jpg'],
         price: 200.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 10,
         name: 'Sanju-DVD',
-        decription: ['Langauage: Hindi', 'Release-Year-2019', 'MPN: 3BUPP2GY11012211', 'Country: India', 'Condition:New'],
+        description: ['Langauage: Hindi', 'Release-Year-2019', 'MPN: 3BUPP2GY11012211', 'Country: India', 'Condition:New'],
         category: 'Gift & Soveniours',
         image: ['img/products/dvd_movies/10/img1.jpg'],
         price: 45.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
+        rank: '4.0',
         reviews: []
     },
     {
         id: 11,
         name: '96-DVD',
-        decription: ['Langauage: Tamil', 'Release-Year-2019', 'MPN: 3BUPP2GY11012212', 'Country: India', 'Condition:New'],
+        description: ['Langauage: Tamil', 'Release-Year-2019', 'MPN: 3BUPP2GY11012212', 'Country: India', 'Condition:New'],
         category: 'Gift & Soveniours',
         image: ['img/products/dvd_movies/11/img1.jpg'],
         price: 50.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
+        rank: '4.0',
         reviews: []
     },
     {
         id: 12,
         name: 'Oru Adaar Love-DVD',
-        decription: ['Langauage: Malayalam', 'Release-Year-2019', 'MPN: 3BUPP2GY11012213', 'Country: India', 'Condition:New'],
+        description: ['Langauage: Malayalam', 'Release-Year-2019', 'MPN: 3BUPP2GY11012213', 'Country: India', 'Condition:New'],
         category: 'Gift & Soveniours',
         image: ['img/products/dvd_movies/12/img1.jpg'],
         price: 60.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
+        rank: '4.0',
         reviews: []
     },
     {
         id: 13,
         name: 'Lucifer-DVD',
-        decription: ['Langauage: Malayalam', 'Release-Year-2019', 'MPN: 3BUPP2GY11012214', 'Country: India', 'Condition:New'],
+        description: ['Langauage: Malayalam', 'Release-Year-2019', 'MPN: 3BUPP2GY11012214', 'Country: India', 'Condition:New'],
         category: 'Gift & Soveniours',
         image: ['img/products/dvd_movies/13/img1.jpg'],
         price: 60.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
+        rank: '4.0',
         reviews: []
     },
     {
         id: 14,
         name: 'Mens Sportwear',
-        decription: ['Theme: Sports', 'Style: Basic Tee', 'Pattern:	Solid', 'Neckline:	Hooded', 'Occasion:	Casual', 'Color:Green/Yellow'],
+        description: ['Theme: Sports', 'Style: Basic Tee', 'Pattern:	Solid', 'Neckline:	Hooded', 'Occasion:	Casual', 'Color:Green/Yellow'],
         category: 'Mens Wear',
         image: ['img/products/mens_wear/14/img1.jpg', 'img/products/mens_wear/14/img2.jpg'],
         price: 150.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 15,
         name: 'Mens Trousers',
-        decription: ['Theme: Sports', 'Brand: Nike', 'Occasion:	Casual', 'Color:Black'],
+        description: ['Theme: Sports', 'Brand: Nike', 'Occasion:	Casual', 'Color:Black'],
         category: 'Mens Wear',
         image: ['img/products/mens_wear/15/img1.jpg', 'img/products/mens_wear/15/img2.jpg'],
         price: 139.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 16,
         name: 'Calvin-Klein Watch',
-        decription: ['Gender: Men', 'Brand: Calvin Klein', 'Occasion:Casual', 'Color:Black'],
+        description: ['Gender: Men', 'Brand: Calvin Klein', 'Occasion:Casual', 'Color:Black'],
         category: 'Mens Wear',
         image: ['img/products/mens_wear/16/img1.jpg'],
         price: 250.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 17,
         name: 'Rolex Mens Datejust ',
-        decription: ['Gender: Men', 'Brand: Rolex', 'Occasion:Casual', 'Color:Silver'],
+        description: ['Gender: Men', 'Brand: Rolex', 'Occasion:Casual', 'Color:Silver'],
         category: 'Mens Wear',
         image: ['img/products/mens_wear/17/img1.jpg', 'img/products/mens_wear/17/img2.jpg', 'img/products/mens_wear/17/img3.jpg'],
         price: 500.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 18,
         name: 'Ladies Necklace',
-        decription: ['Gender: Woman', 'Material: Alloy', 'Occasion:Casual', 'Color:As  Shown'],
+        description: ['Gender: Woman', 'Material: Alloy', 'Occasion:Casual', 'Color:As  Shown'],
         category: 'Ladies Wear',
         image: ['img/products/ladies_wear/18/img1.jpg', 'img/products/ladies_wear/18/img2.jpg'],
         price: 145.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 19,
         name: 'Winter Boots-Ladies',
-        decription: ['Gender: Woman', 'Material:Leather', 'Occasion: Winter-Season', 'Color:Purple'],
+        description: ['Gender: Woman', 'Material:Leather', 'Occasion: Winter-Season', 'Color:Purple'],
         category: 'Ladies Wear',
         image: ['img/products/ladies_wear/19/img1.jpg', 'img/products/ladies_wear/19/img2.jpg', 'img/products/ladies_wear/19/img3.jpg'],
         price: 350.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 20,
         name: 'Office Wear-Ladies',
-        decription: ['Gender: Woman', 'Material:Cotton', 'Occasion: Office/Casual', 'Color:Black and Yellow'],
+        description: ['Gender: Woman', 'Material:Cotton', 'Occasion: Office/Casual', 'Color:Black and Yellow'],
         category: 'Ladies Wear',
         image: ['img/products/ladies_wear/20/img1.jpg', 'img/products/ladies_wear/20/img2.jpg', 'img/products/ladies_wear/20/img3.jpg'],
         price: 350.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 21,
         name: 'Wireless Sport-Earpods',
-        decription: ['Type:	Earbud (In Ear)', 'Wireless Technology:	Bluetooth', 'MPN:3EL2SR1WX0ZN4GC3', 'Color:Black'],
+        description: ['Type:	Earbud (In Ear)', 'Wireless Technology:	Bluetooth', 'MPN:3EL2SR1WX0ZN4GC3', 'Color:Black'],
         category: 'Mobile Accesories',
         image: ['img/products/mobile/21/img1.jpg', 'img/products/mobile/21/img2.jpg', 'img/products/mobile/21/img3.jpg'],
         price: 75.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     },
     {
         id: 22,
         name: 'iPhone 6s Plus',
-        decription: ['Camera Resolution:	12.0MP', 'Processor:	Dual Core', 'RAM:	2GB', 'Bundled Items:	Adapter, Cable', 'Brand:Apple'],
+        description: ['Camera Resolution:	12.0MP', 'Processor:	Dual Core', 'RAM:	2GB', 'Bundled Items:	Adapter, Cable', 'Brand:Apple'],
         category: 'Mobile Accesories',
         image: ['img/products/mobile/22/img1.jpg', 'img/products/mobile/22/img2.jpg', 'img/products/mobile/22/img3.jpg'],
         price: 165.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     },
     {
         id: 23,
         name: 'Samsung S8',
-        decription: ['Camera Resolution:	12.0MP', 'Processor:	Dual Core', 'RAM:	2GB', 'Bundled Items:	Adapter, Cable', 'Brand:Apple'],
+        description: ['Camera Resolution:	12.0MP', 'Processor:	Dual Core', 'RAM:	2GB', 'Bundled Items:	Adapter, Cable', 'Brand:Apple'],
         category: 'Mobile Accesories',
         image: ['img/products/mobile/23/img1.jpg', 'img/products/mobile/23/img2.jpg', 'img/products/mobile/23/img3.jpg'],
         price: 129.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     },
     {
         id: 24,
         name: 'S-Galaxy Tab',
-        decription: ['Camera Resolution:	15.0MP', 'Processor:	9 Core', 'RAM:	7GB', 'Bundled Items:	Adapter, Cable', 'Brand:Samsung'],
+        description: ['Camera Resolution:	15.0MP', 'Processor:	9 Core', 'RAM:	7GB', 'Bundled Items:	Adapter, Cable', 'Brand:Samsung'],
         category: 'Mobile Accesories',
         image: ['img/products/mobile/24/img1.jpg'],
         price: 178.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     },
     {
         id: 25,
         name: 'Pringles-Spicy',
-        decription: ['Food-Type: Chips', 'Flavour:Hot Chilly', 'Country: India', 'MPU: Does not Apply'],
+        description: ['Food-Type: Chips', 'Flavour:Hot Chilly', 'Country: India', 'MPU: Does not Apply'],
         category: 'Grocery',
         image: ['img/products/grocery/25/img1.jpg'],
         price: 40.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     },
     {
         id: 26,
         name: 'Kit-Kat',
-        decription: ['Food-Type: Chocolate', 'Flavour:Banana', 'Country: Dubai', 'MPU: Does not Apply'],
+        description: ['Food-Type: Chocolate', 'Flavour:Banana', 'Country: Dubai', 'MPU: Does not Apply'],
         category: 'Grocery',
         image: ['img/products/grocery/26/img1.jpg'],
         price: 90.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     },
     {
         id: 27,
         name: 'Strawberries',
-        decription: ['Food-Type: Fruit', 'Grams: 1250gs', 'Country: Sri-Lanka', 'MPU: Does not Apply'],
+        description: ['Food-Type: Fruit', 'Grams: 1250gs', 'Country: Sri-Lanka', 'MPU: Does not Apply'],
         category: 'Grocery',
         image: ['img/products/grocery/27/img1.jpg'],
         price: 240.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
+        rank: '4.0',
         reviews: []
     },
     {
         id: 28,
         name: 'Milo-Jumbo',
-        decription: ['Food-Type: Energy Drink', 'Grams: 1kg', 'Country: Sweden', 'MPU: Does not Apply'],
+        description: ['Food-Type: Energy Drink', 'Grams: 1kg', 'Country: Sweden', 'MPU: Does not Apply'],
         category: 'Grocery',
         image: ['img/products/grocery/28/img1.jpg'],
         price: 200.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
+        rank: '4.0',
         reviews: []
     },
     {
         id: 29,
         name: 'Lanka Coffee',
-        decription: ['Food-Type: Coffee', 'Grams: 250g-500g-1kg', 'Country: Sri-Lanka', 'MPU: Does not Apply'],
+        description: ['Food-Type: Coffee', 'Grams: 250g-500g-1kg', 'Country: Sri-Lanka', 'MPU: Does not Apply'],
         category: 'Grocery',
         image: ['img/products/grocery/29/img1.png'],
         price: 145.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
+        rank: '4.0',
         reviews: []
     },
     {
         id: 30,
         name: 'Tang-Drink',
-        decription: ['Food-Type:Drink', 'Flavour:Orange/Lemon/Mango', 'Country: Dubai', 'MPU: Does not Apply'],
+        description: ['Food-Type:Drink', 'Flavour:Orange/Lemon/Mango', 'Country: Dubai', 'MPU: Does not Apply'],
         category: 'Grocery',
         image: ['img/products/grocery/30/img1.jpg'],
         price: 300.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
+        rank: '4.0',
         reviews: []
     },
     {
         id: 1,
         name: 'Adidas Tshirt',
-        decription: 'Adidas brand with certified material',
+        description: 'Adidas brand with certified material',
         category: 'mobileAccesories',
         image: ['img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png'],
         price: 178.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black'],
+        sizes: [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     },
     {
         id: 1,
-        name: 'Adidas Tshirt',
-        decription: 'Adidas brand with certified material',
-        category: 'mobileAccesories',
-        image: ['img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png'],
-        price: 178.00,
-        discount: 0,
-        isFavourite: false,
-        rank: 4,
-        reviews: []
-    },
-    {
-        id: 1,
-        name: 'Adidas Tshirt',
-        decription: 'Adidas brand with certified material',
-        category: 'mobileAccesories',
-        image: ['img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png'],
-        price: 178.00,
-        discount: 0,
-        isFavourite: false,
-        rank: 4,
-        reviews: []
-    },
-    {
-        id: 1,
-        name: 'Adidas Tshirt',
-        decription: 'Adidas brand with certified material',
-        category: 'mobileAccesories',
-        image: ['img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png', 'img/creativetribe.png'],
-        price: 178.00,
-        discount: 0,
-        isFavourite: false,
-        rank: 4,
-        reviews: []
-    },
-    {
-        id: 1,
-        name: 'Bulb',
-        decription: ['Model Number:	M1908C3JG', 'Processor:	Octa Core', 'RAM: 4 GB', 'Model:	Redmi Note 8', 'Operating System: Android', 'Condition:	New'],
+        name: 'Light',
+        description: ['Model Number:	M1908C3JG', 'Processor:	Octa Core', 'RAM: 4 GB', 'Model:	Redmi Note 8', 'Operating System: Android', 'Condition:	New'],
         category: 'Electronics',
         image: ['img/bell.svg'],
         price: 190.00,
         discount: 0,
         isFavourite: false,
-        rank: 4,
-        reviews: []
+        rank: '4.0',
+        reviews: [],
+        colors: ['#ff4f4f', 'white', '#43ff43', '#43fffb', 'black']
     }
 ];
 
@@ -486,7 +529,7 @@ $(document).ready(function() {
     });
 
     // SEARCH FILTER
-    $("#search").on("keyup", function() {
+    $(".search").on("keyup", function() {
         var value = $(this).val().toLowerCase();
         $("#general-product-table tr").filter(function() {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
@@ -530,7 +573,7 @@ $(document).ready(function() {
     });
 
     // OPEN CAMERA
-    $('#btn-camera').click(event => {
+    $('.btn-mic').click(event => {
         window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
         let finalTranscript = '';
         let recognition = new window.SpeechRecognition();
@@ -545,9 +588,15 @@ $(document).ready(function() {
                     finalTranscript += transcript;
                 } else {
                     interimTranscript += transcript;
+                    if (interimTranscript.toLowerCase() === "clear") {
+                        window.location.reload();
+                    }
+                    $("#general-product-table tr").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(interimTranscript) > -1)
+                    });
                 }
             }
-            document.querySelector('body').innerHTML = finalTranscript + '<i style="color:#ddd;">' + interimTranscript + '</>';
+            // document.querySelector('body').innerHTML = finalTranscript + '<i style="color:#ddd;">' + interimTranscript + '</>';
         }
         recognition.start();
         // $('#video').css('display', 'inline-block');
@@ -740,6 +789,7 @@ $(document).ready(function() {
 
     $(".card-content-2").click((ev) => {
         window.sessionStorage.setItem("selectedProduct", JSON.stringify(arrProducts[ev.currentTarget.parentNode.parentNode.id - 1]));
+        window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/view-item.html';
     });
 
     // $(".fav-td").click((ev) => {
