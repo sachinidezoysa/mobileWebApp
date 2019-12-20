@@ -39,7 +39,7 @@
 }
 
 .content>.back>span>b {
-    font-size: 3vh;
+    font-size: 5vw;
     color: orangered;
 }
 
@@ -96,20 +96,11 @@
     align-items: flex-end;
 }
 
-.editBtn{
-    background-color: #FF3D00;
+.final-title{
+    color: orangered;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: none;
-    color: white;
-    padding: 12px;
-    width: 45%;
-    border-radius: 6px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    margin: 4px 2px;
 }
+
  .footer {
     display: flex;
     height: 5vh;
